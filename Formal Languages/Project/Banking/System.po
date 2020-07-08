@@ -1,0 +1,38 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{PIN_STATES}): FIN(NATURAL*{PIN_STATES}) & not(((1..2)*{PIN_STATES}) = {});
+ATMs: FIN(INTEGER) & not(ATMs = {}) & ACCOUNT: FIN(INTEGER) & not(ACCOUNT = {}) & BANK: FIN(INTEGER) & not(BANK = {}) & CARD: FIN(INTEGER) & not(CARD = {}) & CUSTOMER: FIN(INTEGER) & not(CUSTOMER = {});
+atm : POW( ATMs) & atm_id : atm +-> (NATURAL-{0}) & atm_id : atm --> (NATURAL-{0}) & atm_id~ : (NATURAL-{0}) +-> atm & ((atm_id) : (((atm) >-> ((NATURAL-{0}))))) & atm_bank : atm +-> bank & dom(atm_bank) = atm & ((atm_bank) : (((atm) --> (bank)))) & atm_inserted_card : atm +-> cards & atm_inserted_card : atm --> cards & atm_inserted_card~ : cards +-> atm & ((atm_inserted_card) : (((atm) >-> (cards)))) & atm_inserted_card_authenticated : atm +-> BOOL & dom(atm_inserted_card_authenticated) = atm & ((atm_inserted_card_authenticated) : (((atm) --> (BOOL)))) & account : POW( ACCOUNT) & account_currency : account +-> CURRENCY & dom(account_currency) = account & ((account_currency) : (((account) --> (CURRENCY)))) & account_id : account +-> (NATURAL-{0}) & account_id : account --> (NATURAL-{0}) & account_id~ : (NATURAL-{0}) +-> account & ((account_id) : (((account) >-> ((NATURAL-{0}))))) & account_amount : account +-> (NATURAL-{0}) & dom(account_amount) = account & ((account_amount) : (((account) --> ((NATURAL-{0}))))) & account_bank : account +-> bank & dom(account_bank) = account & ((account_bank) : (((account) --> (bank)))) & account_customer : account +-> customer & dom(account_customer) = account & ((account_customer) : (((account) --> (customer)))) & bank : POW( BANK) & bank_name : bank +-> STR & dom(bank_name) = bank & ((bank_name) : (((bank) --> (STR)))) & bank_code : bank +-> (NATURAL-{0}) & bank_code : bank --> (NATURAL-{0}) & bank_code~ : (NATURAL-{0}) +-> bank & ((bank_code) : (((bank) >-> ((NATURAL-{0}))))) & cards : POW( CARD) & card_number : cards +-> STR & card_number : cards --> STR & card_number~ : STR +-> cards & ((card_number) : (((cards) >-> (STR)))) & card_code : cards +-> (NATURAL-{0}) & dom(card_code) = cards & ((card_code) : (((cards) --> ((NATURAL-{0}))))) & card_pin : cards +-> (NATURAL-{0}) & dom(card_pin) = cards & ((card_pin) : (((cards) --> ((NATURAL-{0}))))) & card_account : cards +-> account & dom(card_account) = cards & ((card_account) : (((cards) --> (account)))) & customer : POW( CUSTOMER) & customer_name : customer +-> STR & dom(customer_name) = customer & ((customer_name) : (((customer) --> (STR)))) & customer_id : customer +-> (NATURAL-{0}) & customer_id : customer --> (NATURAL-{0}) & customer_id~ : (NATURAL-{0}) +-> customer & ((customer_id) : (((customer) >-> ((NATURAL-{0})))));
+{} : POW( ATMs);
+{} : {} +-> (NATURAL-{0});
+{} : {} --> (NATURAL-{0});
+{}~ : (NATURAL-{0}) +-> {};
+(({}) : ((({}) >-> ((NATURAL-{0})))));
+{} : {} +-> {};
+dom({}) = {};
+(({}) : ((({}) --> ({}))));
+{} : {} --> {};
+{}~ : {} +-> {};
+(({}) : ((({}) >-> ({}))));
+{} : {} +-> BOOL;
+(({}) : ((({}) --> (BOOL))));
+{} : POW( ACCOUNT);
+{} : {} +-> CURRENCY;
+(({}) : ((({}) --> (CURRENCY))));
+(({}) : ((({}) --> ((NATURAL-{0})))));
+{} : POW( BANK);
+{} : {} +-> STR;
+(({}) : ((({}) --> (STR))));
+{} : POW( CARD);
+{} : {} --> STR;
+{}~ : STR +-> {};
+(({}) : ((({}) >-> (STR))));
+{} : POW( CUSTOMER)
+END
+&
+THEORY EnumerateX IS
+PIN_STATES == {CORRECT_PIN,INCORRECT_PIN}
+END

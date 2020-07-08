@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{13mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\textheight}{225mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{160mm}
+\usepackage{supertabular}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+%\input{psfig}
+
+\begin{document}
+
+
+The general patterns for the proof obligations to discharge for showing the consistency of a simple abstract machine are given at the end of Lecture 4. We abstract away from the contextual abbreviations. Since machine \texttt{Deliveries} has no assertions, constraints and properties, proving its consistency involves:
+\begin{enumerate}
+  \item proving that the initialization establishes the invariant, namely $[U]I$
+	\item proving that each operation preserves it, namely  $I \wedge Q \Rightarrow [V]I$,
+\end{enumerate}
+where
+\begin{align}
+I = \; & items \subseteq ITEM \; \wedge\\
+       & deliveries \in items \rightarrow ADDRESS \; \wedge \\
+			 & nogo \subseteq ADRESS
+\end{align}
+
+
+1. \textbf{Initialization}
+  \begin{align}
+     [U]I = \; & [items := \phi \; || \; deliveries := \phi \; || \; nogo :\in \mathbb{P}(ADDRESS)] \; I = \nonumber \\	  
+		      = \; & [items := \phi \; || \; deliveries := \phi \; || \; \nonumber \\
+					  \; & || \; ANY \; s \; WHERE \; s \in \mathbb{P}(ADDRESS) \;\; THEN \; nogo := s \; END] \; I = \nonumber \\	  
+					= \; & [\; ANY \; s \; WHERE \; s \in \mathbb{P}(ADDRESS)  \nonumber \\
+					  \; & \;\; THEN \; items := \phi \; || \; deliveries := \phi \; || \; nogo := s \; END] \; I = \nonumber \\
+					= \; & \forall \; s \; . \; ( s \in \mathbb{P}(ADDRESS)\Rightarrow [items := \phi \; || \; deliveries := \phi \; || \; nogo := s] \; I )             =	\nonumber  \\
+          = \; & \forall \; s \; . \; ( s \in \mathbb{P}(ADDRESS) \Rightarrow \phi \subseteq ITEM \; \wedge \phi : \phi \rightarrow ADDRESS \;              \wedge s \subseteq ADRESS )
+   \end{align}
+
+Predicate (4) is obviously true \\
+
+2. \textbf{Operations} \\
+
+2.1 Operation \texttt{load}
+
+We have 
+\begin{align}
+  Q = \; & ii \in ITEM - items \; \wedge\\
+	       & aa \in ADDRESS \\
+	V = \; & items := items \cup \{ii\} \; || \; deliveries(ii) := aa \nonumber
+\end{align}
+
+Then
+\begin{align}
+    [V]I = \; & [items := items \cup \{ii\} \; || \; deliveries(ii) := aa] \; I = \nonumber \\	  
+			   = \; & items \cup \{ii\} \subseteq ITEM \; \wedge \\
+					    & deliveries \triangleleft \!\!\!\!- \{ ii \mapsto aa\} \in items \cup \{ii\} \rightarrow ADDRESS \; \wedge \\
+							& nogo \subseteq ADDRESS
+\end{align}
+
+(9) is equivalent to (3), thus true
+
+(7) follows from (1) and (5)
+
+(8) follows from (2), (5) and (6) \\
+
+
+2.2 Operation \texttt{drop}
+
+We have 
+\begin{align}
+  Q = \; & items \neq \phi \\
+	V = \; & ANY \; ii \; WHERE \; ii \; \in \; items \; THEN  \; items := items - \{ii\} \; || \nonumber \\
+	       & || \; deliveries := \{ii\} \mathbin{\triangleleft \llap{-}} deliveries \; || \; it,ad := ii, deliveries(ii) \; END \nonumber
+\end{align}
+
+Let us denote
+\begin{align*}
+  V' = & \; items := items - \{ii\} \; || \; deliveries := \{ii\} \mathbin{\triangleleft \llap{-}} deliveries \; || \\
+	     & \; || \; it,ad := ii, deliveries(ii)
+\end{align*}
+
+Then
+\begin{align}
+    [V]I = & \; [ANY \; ii \; WHERE \; ii \in items \; THEN \; V' \; END ] \; I  = \nonumber \\
+		     = & \; \forall \; ii \; . \; (ii \in items \Rightarrow [V']I ) \nonumber 
+\end{align}
+\begin{align}
+    [V']I = \; & items - \{ii\} \subseteq ITEM \; \wedge \\
+		        \; & \{ii\} \mathbin{\triangleleft \llap{-}} deliveries \in items - \{ii\} \rightarrow ADDRESS \; \wedge \\
+						\; & nogo \subseteq ADDRESS
+\end{align}
+
+(13) is equivalent to (3), thus true for any $ii \in items$.
+
+(11) follows from (1) for any $ii \in items$.
+
+(12) follows from (2) for any $ii \in items$. \\
+
+
+2.3 Operation \texttt{endofday} 
+
+We have 
+\begin{align}
+  Q = \; & true \nonumber \\
+	V = \; & CHOICE \; items,deliveries := \phi, \phi \; OR \; skip \; END \nonumber
+\end{align}
+
+Then
+\begin{align}
+    [V]I = & \; [CHOICE \; items,deliveries := \phi, \phi \; OR \; skip \; END] \; I \nonumber = \\
+		     = & \; [items,deliveries := \phi, \phi]\;I \wedge [skip]\;I = \nonumber \\
+				 = & \; [items,deliveries := \phi, \phi]\;I \wedge I
+\end{align}
+
+The first conjunct of the predicate (14) is provable by analogy to the similar part from the proof concerning the initialisation. \\
+
+
+2.4 Operation \texttt{warning} 
+
+We have 
+\begin{align}
+  Q = \; & aa \in ADDRESS  \\
+	V = \; &  IF \; aa \in nogo \; THEN \; V_1 \; ELSE \; V_2 \; END \nonumber \\
+	V_1 = \; & CHOICE \; nogo := nogo - \{aa\} \; OR \nonumber \\
+	         & deliveries := deliveries \mathbin{\triangleright \llap{--}} \{aa\} \; || \; items := items - deliveries^{-1}[\{aa\}] \; END\nonumber  \\
+	V_2	= \; & IF \; aa \notin ran(deliveries) \; THEN \; nogo := nogo \cup \{aa\} \; END \nonumber			
+\end{align}
+
+Then
+\begin{align}
+  [V] I = & \; (aa \in nogo \Rightarrow [V_1]I) \wedge (\neg \; aa \in nogo \Rightarrow [V_2]I)
+\end{align}
+\begin{align}
+  [V_1]I = \; & [nogo := nogo - \{aa\}] \; I \; \wedge \\
+	            & [deliveries := deliveries \mathbin{\triangleright \llap{--}}
+ \{aa\} \; || \; items := items - deliveries^{-1}[\{aa\}]] \; I
+\end{align}
+
+(17) reduces to $nogo - \{aa\} \subseteq ADDRESS$, which is true based on (3). \\
+
+Proving (18) means proving that
+\begin{align}
+  & items - deliveries^{-1}[\{aa\}] \subseteq ITEM \; \wedge \\
+	& deliveries \mathbin{\triangleright \llap{--}}
+ \{aa\} \in items - deliveries^{-1}[\{aa\}] \rightarrow ADDRESS
+\end{align}
+
+(19) follows from (1) and (15).
+
+(20) follows from (2) and (15).
+
+\begin{align}
+ [V _2]I = & \; (aa \notin ran(deliveries) \Rightarrow [nogo := nogo \cup \{aa\}] I ) \; \wedge \\
+	         & \; (\neg aa \notin ran(deliveries) \Rightarrow [skip] I)
+\end{align}
+
+(22) is obviously true, while (21) reduces to $nogo \cup \{aa\} \subseteq ADDRESS$, which is true based on (3) and (15).
+
+
+\end{document}

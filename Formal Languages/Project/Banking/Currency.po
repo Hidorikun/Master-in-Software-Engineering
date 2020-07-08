@@ -1,0 +1,11 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..3)*{CURRENCY}): FIN(NATURAL*{CURRENCY}) & not(((1..3)*{CURRENCY}) = {})
+END
+&
+THEORY EnumerateX IS
+CURRENCY == {EUR,LEU,DOLLAR}
+END

@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{13mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\textheight}{225mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{160mm}
+\usepackage{supertabular}
+\usepackage{amsfonts}
+%\input{psfig}
+
+\begin{document}
+\begin{sloppypar}
+
+% DEFINITION DES CARACTERES MATHEMATIQUES B
+%------------------------------------------
+\def\@setmcodes#1#2#3{{\count0=#1 \count1=#3
+	\loop \global\mathcode\count0=\count1 \ifnum \count0<#2
+	\advance\count0 by1 \advance\count1 by1 \repeat}}
+
+\@setmcodes{`A}{`Z}{"7441}
+\@setmcodes{`a}{`z}{"7461}
+
+\mathcode`\;="8000 % Makes ; active in math mode
+{\catcode`\;=\active \gdef;{\semicolon\;}}
+\mathchardef\semicolon="003B
+%    Nominal distance from top of paper to top of page
+\topmargin 0 pt
+\textheight 53\baselineskip
+
+%   Left margin on odd-numbered pages
+\oddsidemargin  0.15 in
+%   Left margin on even-numbered pages
+\evensidemargin 0.35 in
+%   Width of marginal notes.
+\marginparwidth 1 in
+%   Note that \oddsidemargin = \evensidemargin
+\oddsidemargin 0.25 in
+\evensidemargin 0.25 in
+\marginparwidth 0.75 in
+\textwidth 5.875 in % Width of text line.
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0ex}
+
+% DEFINITION DES FONTS
+%---------------------
+% The AMS extra symbol fonts are loaded.
+% Note: sometimes called euxm10
+\font\msx=msam10
+% Note: sometimes called euym10
+\font\msy=msbm10
+
+\newfam\msxfam \textfont\msxfam=\msx
+\newfam\msyfam \textfont\msyfam=\msy
+
+\def\famletter#1{\ifcase #1 0\or 1\or 2\or 3\or 4\or 5\or 6\or 7\or
+	8\or 9\or A\or B\or C\or D\or E\or F\fi}
+
+\edef\fx{\famletter\msxfam}
+\edef\fy{\famletter\msyfam}
+
+\def\bbold{\fam\msyfam \msy}
+
+% SYMBOLES B
+%-----------
+% makes a quoted expression in mathematical text
+\def\token#1{\hbox{`$#1$'}}
+% used for error messages in Z specs
+\def\report#1{\hbox{`{\tt #1}'}}
+
+% \@myop makes an operator, with a strut to defeat TeX's vertical adjustment.
+\def\@myop#1{\mathop{\mathstrut{#1}}\nolimits}
+
+% This underscore doesn't have the little kern --- you get an italic
+% correction anyway in math mode.
+\def\_{\leavevmode \vbox{\hrule width0.5em}}
+
+% Save \q as \xq for quantifiers q.
+\let\xforall=\forall
+\let\xexists=\exists
+\let\xlambda=\lambda
+\let\xmu=\mu
+
+% \p and \f make arrows with 1 and 2 crossings resp.
+\def\p#1{\mathrel{\ooalign{\hfil$\mapstochar\mkern 5mu$\hfil\cr$#1$}}}
+\def\f#1{\mathrel{\ooalign{\hfil
+	$\mapstochar\mkern 3mu\mapstochar\mkern 5mu$\hfil\cr$#1$}}}
+
+\let\mc=\mathchardef
+
+\def	\pow		{\mbox{${\mathbb P}$}}
+\def	\po1		{\mbox{${\cal P}_1$}}
+\let	\cross		\times
+\def	\lambda		{\@myop{\xlambda}}
+\def	\lnot		{\neg\;}
+\def	\land		{\mathrel{\wedge}}
+\def	\lor		{\mathrel{\vee}}
+\let	\implies	\Rightarrow
+\let	\iff		\Leftrightarrow
+\def	\forall		{\@myop{\xforall}}
+\def	\exists		{\@myop{\xexists}}
+\def	\semi		{\mathrel{\comp}}
+\def	\ssemi		{\mathbin{\rm ;}}
+\let	\ensembleVide	\emptyset
+\let	\rel		\leftrightarrow
+\def	\dom		{\@myop{\sf dom}}
+\def	\ran		{\@myop{\sf ran}}
+\def	\id		{\@myop{\sf id}}
+\def	\comp		{\mathbin{\raise
+			0.6ex\hbox{\oalign{\hfil$\scriptscriptstyle
+			\rm o$\hfil\cr\hfil$\scriptscriptstyle\rm 9$\hfil}}}}
+\def	\para		{\mbox{$\mid\mid$}}
+\mc	\dres		"2\fx43
+\mc	\rres		"2\fx42
+\def	\ndres		{\mathbin{{\dres} \llap{$-$}}}
+\def	\nrres		{\mathbin{{\rres}\llap{$-$}}}
+\def	\lover		{\mathbin{{\dres} \llap{$-\!\!\!\!-\!$}}}
+\def	\rover		{\mathbin{{\rres}\llap{$\!-\!\!\!-$}}}
+\let	\fun		\rightarrow
+\def	\pfun		{\p\fun}
+\def	\pinj		{\p\inj}
+\mc	\inj		"3\fx1A
+\def	\psurj		{\p\surj}
+\mc	\surj		"3\fx10
+\def	\bij		{\surj\!\!\!\!\!\!\!\inj}
+\def	\nat		{\mbox{${\cal N}$}}
+\def	\na1		{\mbox{${\cal N}_1$}}
+\def	\num		{\mbox{${\cal Z}$}}
+\def	\int		{\mbox{${\cal Z}$}}
+\def	\rat		{\mbox{${\cal Q}$}}
+\def	\div		{\mathbin{\rm /}}
+\def	\mod		{\mathbin{\bf mod}}
+\def	\upto		{\mathbin{\ldotp\ldotp}}
+\def	\finset		{\mbox{${\cal F}$}}
+\def	\finse1		{\mbox{${\cal F}_1$}}
+\def	\ffun		{\f\fun}
+\def	\finj		{\f\inj}
+\def	\seq		{\@myop{\rm seq}}
+\def	\cat		{\mathbin{\raise 0.8ex\hbox{$\mathchar"2\fx61$}}}
+\def	\sep		{\hspace*{.05in}}
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+%-------------------%
+% Debut du document %
+%-------------------%
+
+\textbf{Problem 2}: Give a machine that captures the following description and check its consistency. \\[0.2cm]
+
+A \textit{Deliveries} machine keeps track of the items on a delivery van and the addresses to which they should be delivered. It also keeps track of a special set of addresses \textit{nogo} for which there might be problems in making deliveries. \\
+Initially, the van is empty and the set \textit{nogo} can be initialized to any arbitrary set of addresses. \\
+The machine provides four operations:
+\begin{enumerate}
+  \item \textbf{load} takes an item \textit{ii} and an address \textit{aa} as input and adds \textit{ii}, to be delivered to \textit{aa}, to the 
+	       contents of the van.
+	\item \textbf{drop} should only be invoked when the van is not empty. In such a case, it chooses an arbitrary item \textit{ii} from the van and 
+	      delivers it to address \textit{aa}; these two values are provided as outputs of the operation.			
+	\item \textbf{endofday} can always be invoked. It nondeterministically chooses either to empty the van, or to leave it as it is. It has no 
+	      inputs or outputs. 
+	\item \textbf{warning} takes an address \textit{aa} as input. If the address is in \textit{nogo}, then it might remove all items associated to 
+	      that address from the van; or, alternatively, it might remove the address from \textit{nogo}. If the address is not in \textit{nogo} and  
+				there are no deliveries to that address, then it will be inserted into \textit{nogo}. In all the other cases, the operation has no 
+				effect. 			
+\end{enumerate}
+
+\end{sloppypar}\end{document}

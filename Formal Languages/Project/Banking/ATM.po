@@ -1,0 +1,97 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & WellDefinedness_get_atm_inserted_card.2,(_f(52) => _f(61));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & WellDefinedness_get_atm_inserted_card.1,(_f(52) => _f(60));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & WellDefinedness_get_atm_bank.2,(_f(52) => _f(59));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & WellDefinedness_get_atm_bank.1,(_f(52) => _f(58));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(26) & WellDefinedness_get_atm_card_authenticated.2,(_f(52) => _f(57));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(26) & WellDefinedness_get_atm_card_authenticated.1,(_f(52) => _f(56));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & WellDefinedness_get_atm_id.2,(_f(52) => _f(54));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & WellDefinedness_get_atm_id.1,(_f(52) => _f(53));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & destroy_atm.5,(_f(4) & _f(13) => _f(37));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & destroy_atm.4,(_f(4) & _f(11) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & destroy_atm.3,(_f(4) & _f(9) => _f(35));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & destroy_atm.2,(_f(4) & _f(7) => _f(34));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(23) & destroy_atm.1,(_f(4) & _f(5) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(26) & atm_remove_card.2,(_f(4) & _f(13) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(26) & atm_remove_card.1,(_f(4) & _f(11) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(29) & atm_insert_card.1,(_f(4) & _f(11) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(27) & set_atm_bank.1,(_f(4) & _f(9) => _f(28));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(24) & set_atm_card_authenticated.1,(_f(4) & _f(13) => _f(25));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(16) & create_atm.5,(_f(17) & _f(4) & _f(13) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(16) & create_atm.4,(_f(17) & _f(4) & _f(11) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(16) & create_atm.3,(_f(17) & _f(4) & _f(9) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(16) & create_atm.2,(_f(17) & _f(4) & _f(7) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(15) & _f(16) & create_atm.1,(_f(17) & _f(4) & _f(5) => _f(18));
+_f(1) & _f(2) & _f(3) & Initialisation.5,(_f(4) & _f(13) => _f(14));
+_f(1) & _f(2) & _f(3) & Initialisation.4,(_f(4) & _f(11) => _f(12));
+_f(1) & _f(2) & _f(3) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+STR: FIN(INTEGER) & not(STR = {});
+ATMs: FIN(INTEGER) & not(ATMs = {});
+"Invariant is preserved";
+"Check invariant atm : POW( ATMs)";
+{} : POW( ATMs);
+"Check invariant ((atm_id) : (((atm) >-> ((NATURAL-{0})))))";
+(({}) : ((({}) >-> ((NATURAL-{0})))));
+"Check invariant ((atm_bank) : (((atm) --> (bank))))";
+(({}) : ((({}) --> (bank))));
+"Check invariant ((atm_inserted_card) : (((atm) >-> (cards))))";
+(({}) : ((({}) >-> (cards))));
+"Check invariant ((atm_inserted_card_authenticated) : (((atm) --> (BOOL))))";
+(({}) : ((({}) --> (BOOL))));
+atm : POW( ATMs) & atm_id : atm +-> (NATURAL-{0}) & atm_id : atm --> (NATURAL-{0}) & atm_id~ : (NATURAL-{0}) +-> atm & ((atm_id) : (((atm) >-> ((NATURAL-{0}))))) & atm_bank : atm +-> bank & dom(atm_bank) = atm & ((atm_bank) : (((atm) --> (bank)))) & atm_inserted_card : atm +-> cards & atm_inserted_card : atm --> cards & atm_inserted_card~ : cards +-> atm & ((atm_inserted_card) : (((atm) >-> (cards)))) & atm_inserted_card_authenticated : atm +-> BOOL & dom(atm_inserted_card_authenticated) = atm & ((atm_inserted_card_authenticated) : (((atm) --> (BOOL))));
+((id_value) : ((NATURAL-{0}))) & not(id_value : ran(atm_id)) & ((bank_value) : (bank));
+((new_atm) : ((ATMs - atm)));
+((atm) \/ (({new_atm}))) : POW( ATMs);
+((((atm_id) <+ (({((new_atm) |-> (id_value))})))) : (((((atm) \/ (({new_atm})))) >-> ((NATURAL-{0})))));
+((((atm_bank) <+ (({((new_atm) |-> (bank_value))})))) : (((((atm) \/ (({new_atm})))) --> (bank))));
+((atm_inserted_card) : (((((atm) \/ (({new_atm})))) >-> (cards))));
+((atm_inserted_card_authenticated) : (((((atm) \/ (({new_atm})))) --> (BOOL))));
+((atm_value) : (atm));
+((atm_value) : (atm)) & ((auth_value) : (BOOL)) & ((atm_value) : (dom(atm_inserted_card)));
+((((atm_inserted_card_authenticated) <+ (({((atm_value) |-> (auth_value))})))) : (((atm) --> (BOOL))));
+((atm_value) : (atm)) & ((atm_value) : (dom(atm_inserted_card)));
+((atm_value) : (atm)) & ((bank_value) : (bank));
+((((atm_bank) <+ (({((atm_value) |-> (bank_value))})))) : (((atm) --> (bank))));
+((atm_value) : (atm)) & ((card_value) : (cards));
+((((atm_inserted_card) <+ (({((atm_value) |-> (card_value))})))) : (((atm) >-> (cards))));
+((((({atm_value})) <<| (atm_inserted_card))) : (((atm) >-> (cards))));
+((((({atm_value})) <<| (atm_inserted_card_authenticated))) : (((atm) --> (BOOL))));
+(atm - ({atm_value})) : POW( ATMs);
+((((({atm_value})) <<| (atm_id))) : ((((atm - ({atm_value}))) >-> ((NATURAL-{0})))));
+((((({atm_value})) <<| (atm_bank))) : ((((atm - ({atm_value}))) --> (bank))));
+((atm_inserted_card) : ((((atm - ({atm_value}))) >-> (cards))));
+((atm_inserted_card_authenticated) : ((((atm - ({atm_value}))) --> (BOOL))));
+atm_inserted_card : atm +-> cards;
+atm_inserted_card : atm --> cards;
+atm_inserted_card~ : cards +-> atm;
+((atm_inserted_card) : (((atm) >-> (cards))));
+atm_bank : atm +-> bank;
+dom(atm_bank) = atm;
+((atm_bank) : (((atm) --> (bank))));
+atm_id : atm +-> (NATURAL-{0});
+atm_id : atm --> (NATURAL-{0});
+atm_id~ : (NATURAL-{0}) +-> atm;
+((atm_id) : (((atm) >-> ((NATURAL-{0})))));
+atm : POW( ATMs);
+not(id_value : ran(atm_id));
+((id_value) : ((NATURAL-{0})));
+"Well definedness";
+((atm_value) : (dom(atm_id)));
+((atm_id) : (((dom(atm_id)) +-> (ran(atm_id)))));
+((auth_value) : (BOOL));
+((atm_value) : (dom(atm_inserted_card_authenticated)));
+((atm_inserted_card_authenticated) : (((dom(atm_inserted_card_authenticated)) +-> (ran(atm_inserted_card_authenticated)))));
+((atm_value) : (dom(atm_bank)));
+((atm_bank) : (((dom(atm_bank)) +-> (ran(atm_bank)))));
+((atm_value) : (dom(atm_inserted_card)));
+((atm_inserted_card) : (((dom(atm_inserted_card)) +-> (ran(atm_inserted_card)))))
+END
+&
+THEORY EnumerateX
+END

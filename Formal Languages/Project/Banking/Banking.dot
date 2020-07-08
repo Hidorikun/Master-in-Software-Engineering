@@ -1,0 +1,17 @@
+digraph {
+ATM [ label=" ATM " shape= box ]
+Account [ label=" Account " shape= box ]
+Bank [ label=" Bank " shape= box ]
+Card [ label=" Card " shape= box ]
+Currency [ label=" Currency " shape= box ]
+Customer [ label=" Customer " shape= box ]
+String [ label=" String " shape= box ]
+System [ label=" System " shape= box ]
+
+"ATM" -> "String" [style= dotted ]
+"Account" -> "String" [style= dotted ]
+"Account" -> "Currency" [style= dotted ]
+"Bank" -> "String" [style= dotted ]
+"Card" -> "String" [style= dotted ]
+"Customer" -> "String" [style= dotted ]
+}

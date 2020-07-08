@@ -1,0 +1,45 @@
+<Machine name='Currency' type='abstraction'>
+<Sets>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='CURRENCY' typref='1322598246'>
+<Attr>
+<Pos l='9' c='5' s='8'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='EUR' typref='3335280435'>
+<Attr>
+<Pos l='9' c='17' s='3'/>
+</Attr>
+</Id>
+<Id value='LEU' typref='3335280435'>
+<Attr>
+<Pos l='9' c='22' s='3'/>
+</Attr>
+</Id>
+<Id value='DOLLAR' typref='3335280435'>
+<Attr>
+<Pos l='9' c='27' s='6'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='1322598246'>
+<Unary_Exp op='POW'>
+<Id value='CURRENCY'/>
+</Unary_Exp>
+</Type>
+<Type id='3335280435'>
+<Id value='CURRENCY'/>
+</Type>
+</TypeInfos>
+
+</Machine>

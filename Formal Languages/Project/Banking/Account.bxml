@@ -1,0 +1,1644 @@
+<Machine name='Account' type='abstraction'>
+<Sees>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='5' s='6'/>
+</Attr>
+<Name>String</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='10' c='5' s='8'/>
+</Attr>
+<Name>Currency</Name>
+</Referenced_Machine>
+</Sees>
+<Uses>
+<Attr>
+<Pos l='12' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='13' c='5' s='4'/>
+</Attr>
+<Name>Bank</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='14' c='5' s='8'/>
+</Attr>
+<Name>Customer</Name>
+</Referenced_Machine>
+</Uses>
+<Sets>
+<Attr>
+<Pos l='16' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='ACCOUNT' typref='722135624'>
+<Attr>
+<Pos l='17' c='5' s='7'/>
+</Attr>
+</Id>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Attr>
+<Pos l='19' c='1' s='18'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='20' c='5' s='7'/>
+</Attr>
+</Id>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='21' c='5' s='16'/>
+</Attr>
+</Id>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='22' c='5' s='14'/>
+</Attr>
+</Id>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='23' c='5' s='10'/>
+</Attr>
+</Id>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='24' c='5' s='12'/>
+</Attr>
+</Id>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='25' c='5' s='16'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='27' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='28' c='13' s='2'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='28' c='5' s='7'/>
+</Attr>
+</Id>
+<Id value='ACCOUNT' typref='722135624'>
+<Attr>
+<Pos l='28' c='16' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='29' c='23' s='1'/>
+</Attr>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='29' c='7' s='16'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='4091922397'>
+<Attr>
+<Pos l='29' c='33' s='3'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='29' c='25' s='7'/>
+</Attr>
+</Id>
+<Id value='CURRENCY' typref='1322598246'>
+<Attr>
+<Pos l='29' c='37' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='30' c='17' s='1'/>
+</Attr>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='30' c='7' s='10'/>
+</Attr>
+</Id>
+<Binary_Exp op='&gt;-&gt;' typref='4169395204'>
+<Attr>
+<Pos l='30' c='27' s='3'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='30' c='19' s='7'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='30' c='31' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='31' c='21' s='1'/>
+</Attr>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='31' c='7' s='14'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='4169395204'>
+<Attr>
+<Pos l='31' c='31' s='3'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='31' c='23' s='7'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='31' c='35' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='32' c='19' s='1'/>
+</Attr>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='32' c='7' s='12'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='1067919250'>
+<Attr>
+<Pos l='32' c='29' s='3'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='32' c='21' s='7'/>
+</Attr>
+</Id>
+<Id value='bank' typref='3780644081'>
+<Attr>
+<Pos l='32' c='33' s='4'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='33' c='23' s='1'/>
+</Attr>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='33' c='7' s='16'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='3402523632'>
+<Attr>
+<Pos l='33' c='33' s='3'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='33' c='25' s='7'/>
+</Attr>
+</Id>
+<Id value='customer' typref='2110079763'>
+<Attr>
+<Pos l='33' c='37' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='35' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='36' c='13' s='2'/>
+</Attr>
+<Variables>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='36' c='5' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='36' c='16' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='37' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='37' c='8' s='16'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='37' c='28' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='38' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='38' c='8' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='38' c='22' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='39' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='39' c='8' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='39' c='26' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='40' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='40' c='8' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='40' c='24' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='41' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='41' c='8' s='16'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='41' c='28' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='create_account'>
+<Attr>
+<Pos l='46' c='5' s='13' endLine='63'/>
+</Attr>
+<Output_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='46' c='5' s='13'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='46' c='38' s='8'/>
+</Attr>
+</Id>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='46' c='48' s='14'/>
+</Attr>
+</Id>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='46' c='64' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='48' c='18' s='1'/>
+</Attr>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='48' c='9' s='8'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='48' c='20' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='49' c='20' s='2'/>
+</Attr>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='49' c='11' s='8'/>
+</Attr>
+</Id>
+<Unary_Exp op='ran' typref='3603043417'>
+<Attr>
+<Pos l='49' c='23' s='3'/>
+</Attr>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='49' c='27' s='10'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='50' c='26' s='1'/>
+</Attr>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='50' c='11' s='14'/>
+</Attr>
+</Id>
+<Id value='CURRENCY' typref='1322598246'>
+<Attr>
+<Pos l='50' c='28' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='51' c='22' s='1'/>
+</Attr>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='51' c='11' s='10'/>
+</Attr>
+</Id>
+<Id value='bank' typref='3780644081'>
+<Attr>
+<Pos l='51' c='24' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<ANY_Sub>
+<Attr>
+<Pos l='53' c='9' s='3'/>
+</Attr>
+<Variables>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='53' c='13' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='54' c='25' s='1'/>
+</Attr>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='54' c='13' s='11'/>
+</Attr>
+</Id>
+<Binary_Exp op='-' typref='722135624'>
+<Attr>
+<Pos l='54' c='35' s='1'/>
+</Attr>
+<Id value='ACCOUNT' typref='722135624'>
+<Attr>
+<Pos l='54' c='27' s='7'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='54' c='37' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='56' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='56' c='13' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='722135624'>
+<Attr>
+<Pos l='56' c='32' s='2'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='56' c='24' s='7'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='56' c='35' s='1'/>
+</Attr>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='56' c='36' s='11'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='57' c='40' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='57' c='26' s='0'/>
+</Attr>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='57' c='16' s='10'/>
+</Attr>
+</Id>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='57' c='27' s='11'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='57' c='43' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='58' c='46' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='3335280435'>
+<Attr>
+<Pos l='58' c='32' s='0'/>
+</Attr>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='58' c='16' s='16'/>
+</Attr>
+</Id>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='58' c='33' s='11'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='58' c='49' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='59' c='42' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='3505119464'>
+<Attr>
+<Pos l='59' c='28' s='0'/>
+</Attr>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='59' c='16' s='12'/>
+</Attr>
+</Id>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='59' c='29' s='11'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='59' c='45' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='60' c='30' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='60' c='16' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='new_account' typref='2223075579'>
+<Attr>
+<Pos l='60' c='33' s='11'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Body>
+</Operation>
+<Operation name='get_account_id'>
+<Attr>
+<Pos l='66' c='5' s='8' endLine='71'/>
+</Attr>
+<Output_Parameters>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='66' c='5' s='8'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='66' c='33' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='68' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='68' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='68' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='70' c='18' s='2'/>
+</Attr>
+<Variables>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='70' c='9' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='70' c='31' s='0'/>
+</Attr>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='70' c='21' s='10'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='70' c='32' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_account_currency'>
+<Attr>
+<Pos l='74' c='5' s='14' endLine='79'/>
+</Attr>
+<Output_Parameters>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='74' c='5' s='14'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='74' c='45' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='76' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='76' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='76' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='78' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='78' c='9' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='3335280435'>
+<Attr>
+<Pos l='78' c='43' s='0'/>
+</Attr>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='78' c='27' s='16'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='78' c='44' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_account_currency'>
+<Attr>
+<Pos l='82' c='5' s='20' endLine='88'/>
+</Attr>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='82' c='26' s='13'/>
+</Attr>
+</Id>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='82' c='41' s='14'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='84' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='84' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='84' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='85' c='26' s='1'/>
+</Attr>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='85' c='11' s='14'/>
+</Attr>
+</Id>
+<Id value='CURRENCY' typref='1322598246'>
+<Attr>
+<Pos l='85' c='28' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='87' c='41' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='3335280435'>
+<Attr>
+<Pos l='87' c='25' s='0'/>
+</Attr>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='87' c='9' s='16'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='87' c='26' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='currency_value' typref='3335280435'>
+<Attr>
+<Pos l='87' c='44' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_account_bank'>
+<Attr>
+<Pos l='91' c='5' s='10' endLine='96'/>
+</Attr>
+<Output_Parameters>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='91' c='5' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='91' c='37' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='93' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='93' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='93' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='95' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='95' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='3505119464'>
+<Attr>
+<Pos l='95' c='35' s='0'/>
+</Attr>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='95' c='23' s='12'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='95' c='36' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_account_amount'>
+<Attr>
+<Pos l='100' c='5' s='12' endLine='105'/>
+</Attr>
+<Output_Parameters>
+<Id value='amount_value' typref='2701647786'>
+<Attr>
+<Pos l='100' c='5' s='12'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='100' c='41' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='102' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='102' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='102' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='104' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='amount_value' typref='2701647786'>
+<Attr>
+<Pos l='104' c='9' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='104' c='39' s='0'/>
+</Attr>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='104' c='25' s='14'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='104' c='40' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='withdraw_account_amount'>
+<Attr>
+<Pos l='108' c='5' s='23' endLine='116'/>
+</Attr>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='108' c='29' s='13'/>
+</Attr>
+</Id>
+<Id value='money_value' typref='2701647786'>
+<Attr>
+<Pos l='108' c='44' s='11'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='110' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='110' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='110' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='111' c='23' s='1'/>
+</Attr>
+<Id value='money_value' typref='2701647786'>
+<Attr>
+<Pos l='111' c='11' s='11'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='111' c='25' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;'>
+<Attr>
+<Pos l='112' c='23' s='1'/>
+</Attr>
+<Id value='money_value' typref='2701647786'>
+<Attr>
+<Pos l='112' c='11' s='11'/>
+</Attr>
+</Id>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='112' c='39' s='0'/>
+</Attr>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='112' c='25' s='14'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='112' c='40' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='113' c='28' s='1'/>
+</Attr>
+<Binary_Exp op='/' typref='2701647786'>
+<Attr>
+<Pos l='113' c='23' s='1'/>
+</Attr>
+<Id value='money_value' typref='2701647786'>
+<Attr>
+<Pos l='113' c='11' s='11'/>
+</Attr>
+</Id>
+<Integer_Literal value='10' typref='2701647786'>
+<Attr>
+<Pos l='113' c='25' s='2'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='113' c='30' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='115' c='39' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='115' c='23' s='0'/>
+</Attr>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='115' c='9' s='14'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='115' c='24' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='2701647786'>
+<Attr>
+<Pos l='115' c='72' s='1'/>
+</Attr>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='115' c='56' s='0'/>
+</Attr>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='115' c='42' s='14'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='115' c='57' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id value='money_value' typref='2701647786'>
+<Attr>
+<Pos l='115' c='74' s='11'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_account_customer'>
+<Attr>
+<Pos l='119' c='5' s='14' endLine='124'/>
+</Attr>
+<Output_Parameters>
+<Id value='customer_value' typref='1773367622'>
+<Attr>
+<Pos l='119' c='5' s='14'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='119' c='45' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='121' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='121' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='121' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='123' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='customer_value' typref='1773367622'>
+<Attr>
+<Pos l='123' c='9' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='1773367622'>
+<Attr>
+<Pos l='123' c='43' s='0'/>
+</Attr>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='123' c='27' s='16'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='123' c='44' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_account_customer'>
+<Attr>
+<Pos l='127' c='5' s='20' endLine='133'/>
+</Attr>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='127' c='26' s='13'/>
+</Attr>
+</Id>
+<Id value='customer_value' typref='1773367622'>
+<Attr>
+<Pos l='127' c='41' s='14'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='129' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='129' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='129' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='130' c='26' s='1'/>
+</Attr>
+<Id value='customer_value' typref='1773367622'>
+<Attr>
+<Pos l='130' c='11' s='14'/>
+</Attr>
+</Id>
+<Id value='customer' typref='2110079763'>
+<Attr>
+<Pos l='130' c='28' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='132' c='41' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='1773367622'>
+<Attr>
+<Pos l='132' c='25' s='0'/>
+</Attr>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='132' c='9' s='16'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='132' c='26' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='customer_value' typref='1773367622'>
+<Attr>
+<Pos l='132' c='44' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='destroy_account'>
+<Attr>
+<Pos l='136' c='5' s='15' endLine='146'/>
+</Attr>
+<Input_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='136' c='21' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='138' c='23' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='138' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='138' c='25' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='140' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='140' c='9' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='722135624'>
+<Attr>
+<Pos l='140' c='28' s='1'/>
+</Attr>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='140' c='20' s='7'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='140' c='30' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='140' c='31' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='141' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='141' c='12' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='3514921919'>
+<Attr>
+<Pos l='141' c='42' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='141' c='26' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='141' c='27' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='account_id' typref='3514921919'>
+<Attr>
+<Pos l='141' c='46' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='142' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='142' c='12' s='16'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='947324'>
+<Attr>
+<Pos l='142' c='48' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='142' c='32' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='142' c='33' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='account_currency' typref='947324'>
+<Attr>
+<Pos l='142' c='52' s='16'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='143' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='143' c='12' s='14'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='3514921919'>
+<Attr>
+<Pos l='143' c='46' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='143' c='30' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='143' c='31' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='account_amount' typref='3514921919'>
+<Attr>
+<Pos l='143' c='50' s='14'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='144' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='144' c='12' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='802423687'>
+<Attr>
+<Pos l='144' c='44' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='144' c='28' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='144' c='29' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='account_bank' typref='802423687'>
+<Attr>
+<Pos l='144' c='48' s='12'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='145' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='145' c='12' s='16'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='3572730537'>
+<Attr>
+<Pos l='145' c='48' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='722135624'>
+<Attr>
+<Pos l='145' c='32' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='145' c='33' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='account_customer' typref='3572730537'>
+<Attr>
+<Pos l='145' c='52' s='16'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='722135624'>
+<Unary_Exp op='POW'>
+<Id value='ACCOUNT'/>
+</Unary_Exp>
+</Type>
+<Type id='947324'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='CURRENCY'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3514921919'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='802423687'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='BANK'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3572730537'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='CUSTOMER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4091922397'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='CURRENCY'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1322598246'>
+<Unary_Exp op='POW'>
+<Id value='CURRENCY'/>
+</Unary_Exp>
+</Type>
+<Type id='4169395204'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='1067919250'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='BANK'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3780644081'>
+<Unary_Exp op='POW'>
+<Id value='BANK'/>
+</Unary_Exp>
+</Type>
+<Type id='3402523632'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ACCOUNT'/>
+<Id value='CUSTOMER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2110079763'>
+<Unary_Exp op='POW'>
+<Id value='CUSTOMER'/>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='2223075579'>
+<Id value='ACCOUNT'/>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3335280435'>
+<Id value='CURRENCY'/>
+</Type>
+<Type id='3505119464'>
+<Id value='BANK'/>
+</Type>
+<Type id='1773367622'>
+<Id value='CUSTOMER'/>
+</Type>
+</TypeInfos>
+
+</Machine>

@@ -1,0 +1,1466 @@
+<Machine name='ATM' type='abstraction'>
+<Sees>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='5' s='6'/>
+</Attr>
+<Name>String</Name>
+</Referenced_Machine>
+</Sees>
+<Uses>
+<Attr>
+<Pos l='11' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='12' c='5' s='4'/>
+</Attr>
+<Name>Bank</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='13' c='5' s='4'/>
+</Attr>
+<Name>Card</Name>
+</Referenced_Machine>
+</Uses>
+<Sets>
+<Attr>
+<Pos l='15' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='ATMs' typref='3628986030'>
+<Attr>
+<Pos l='16' c='5' s='4'/>
+</Attr>
+</Id>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Attr>
+<Pos l='18' c='1' s='18'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='19' c='5' s='3'/>
+</Attr>
+</Id>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='20' c='5' s='6'/>
+</Attr>
+</Id>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='21' c='5' s='8'/>
+</Attr>
+</Id>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='22' c='5' s='17'/>
+</Attr>
+</Id>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='23' c='5' s='31'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='25' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='26' c='9' s='2'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='26' c='5' s='3'/>
+</Attr>
+</Id>
+<Id value='ATMs' typref='3628986030'>
+<Attr>
+<Pos l='26' c='12' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='27' c='14' s='1'/>
+</Attr>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='27' c='7' s='6'/>
+</Attr>
+</Id>
+<Binary_Exp op='&gt;-&gt;' typref='514122982'>
+<Attr>
+<Pos l='27' c='20' s='3'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='27' c='16' s='3'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='27' c='24' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='28' c='16' s='1'/>
+</Attr>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='28' c='7' s='8'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='830522672'>
+<Attr>
+<Pos l='28' c='22' s='3'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='28' c='18' s='3'/>
+</Attr>
+</Id>
+<Id value='bank' typref='3780644081'>
+<Attr>
+<Pos l='28' c='26' s='4'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='29' c='25' s='1'/>
+</Attr>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='29' c='7' s='17'/>
+</Attr>
+</Id>
+<Binary_Exp op='&gt;-&gt;' typref='3228664444'>
+<Attr>
+<Pos l='29' c='31' s='3'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='29' c='27' s='3'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='29' c='35' s='5'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='30' c='39' s='1'/>
+</Attr>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='30' c='7' s='31'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='3238711906'>
+<Attr>
+<Pos l='30' c='45' s='3'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='30' c='41' s='3'/>
+</Attr>
+</Id>
+<Id value='BOOL' typref='4282494527'>
+<Attr>
+<Pos l='30' c='49' s='4'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='32' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='33' c='9' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='33' c='5' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='33' c='12' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='34' c='15' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='34' c='8' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='34' c='18' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='35' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='35' c='8' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='35' c='20' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='36' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='36' c='8' s='17'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='36' c='29' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='37' c='40' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='37' c='8' s='31'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='37' c='43' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='create_atm'>
+<Attr>
+<Pos l='42' c='5' s='9' endLine='56'/>
+</Attr>
+<Output_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='42' c='5' s='9'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='42' c='30' s='8'/>
+</Attr>
+</Id>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='42' c='40' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='44' c='18' s='1'/>
+</Attr>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='44' c='9' s='8'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='44' c='20' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='45' c='20' s='2'/>
+</Attr>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='45' c='11' s='8'/>
+</Attr>
+</Id>
+<Unary_Exp op='ran' typref='3603043417'>
+<Attr>
+<Pos l='45' c='23' s='3'/>
+</Attr>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='45' c='27' s='6'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='46' c='22' s='1'/>
+</Attr>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='46' c='11' s='10'/>
+</Attr>
+</Id>
+<Id value='bank' typref='3780644081'>
+<Attr>
+<Pos l='46' c='24' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<ANY_Sub>
+<Attr>
+<Pos l='48' c='9' s='3'/>
+</Attr>
+<Variables>
+<Id value='new_atm' typref='2704304363'>
+<Attr>
+<Pos l='48' c='13' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='49' c='21' s='1'/>
+</Attr>
+<Id value='new_atm' typref='2704304363'>
+<Attr>
+<Pos l='49' c='13' s='7'/>
+</Attr>
+</Id>
+<Binary_Exp op='-' typref='3628986030'>
+<Attr>
+<Pos l='49' c='28' s='1'/>
+</Attr>
+<Id value='ATMs' typref='3628986030'>
+<Attr>
+<Pos l='49' c='23' s='4'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='49' c='30' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='51' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='51' c='13' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3628986030'>
+<Attr>
+<Pos l='51' c='24' s='2'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='51' c='20' s='3'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='3628986030'>
+<Attr>
+<Pos l='51' c='27' s='1'/>
+</Attr>
+<Id value='new_atm' typref='2704304363'>
+<Attr>
+<Pos l='51' c='28' s='7'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='52' c='32' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='52' c='22' s='0'/>
+</Attr>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='52' c='16' s='6'/>
+</Attr>
+</Id>
+<Id value='new_atm' typref='2704304363'>
+<Attr>
+<Pos l='52' c='23' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='52' c='35' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='53' c='34' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='3505119464'>
+<Attr>
+<Pos l='53' c='24' s='0'/>
+</Attr>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='53' c='16' s='8'/>
+</Attr>
+</Id>
+<Id value='new_atm' typref='2704304363'>
+<Attr>
+<Pos l='53' c='25' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='53' c='37' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='54' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='54' c='16' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='new_atm' typref='2704304363'>
+<Attr>
+<Pos l='54' c='29' s='7'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Body>
+</Operation>
+<Operation name='get_atm_id'>
+<Attr>
+<Pos l='59' c='5' s='8' endLine='64'/>
+</Attr>
+<Output_Parameters>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='59' c='5' s='8'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='59' c='29' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='61' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='61' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='61' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='63' c='18' s='2'/>
+</Attr>
+<Variables>
+<Id value='id_value' typref='2701647786'>
+<Attr>
+<Pos l='63' c='9' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='63' c='27' s='0'/>
+</Attr>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='63' c='21' s='6'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='63' c='28' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_atm_card_authenticated'>
+<Attr>
+<Pos l='67' c='5' s='26' endLine='74'/>
+</Attr>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='67' c='32' s='9'/>
+</Attr>
+</Id>
+<Id value='auth_value' typref='2043437594'>
+<Attr>
+<Pos l='67' c='43' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='69' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='69' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='69' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='70' c='21' s='1'/>
+</Attr>
+<Id value='auth_value' typref='2043437594'>
+<Attr>
+<Pos l='70' c='11' s='10'/>
+</Attr>
+</Id>
+<Id value='BOOL' typref='4282494527'>
+<Attr>
+<Pos l='70' c='23' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='71' c='21' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='71' c='11' s='9'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='3628986030'>
+<Attr>
+<Pos l='71' c='23' s='3'/>
+</Attr>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='71' c='27' s='17'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='73' c='52' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2043437594'>
+<Attr>
+<Pos l='73' c='40' s='0'/>
+</Attr>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='73' c='9' s='31'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='73' c='41' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='auth_value' typref='2043437594'>
+<Attr>
+<Pos l='73' c='55' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_atm_card_authenticated'>
+<Attr>
+<Pos l='77' c='5' s='10' endLine='83'/>
+</Attr>
+<Output_Parameters>
+<Id value='auth_value' typref='2043437594'>
+<Attr>
+<Pos l='77' c='5' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='77' c='47' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='79' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='79' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='79' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='80' c='21' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='80' c='11' s='9'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='3628986030'>
+<Attr>
+<Pos l='80' c='23' s='3'/>
+</Attr>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='80' c='27' s='17'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='82' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='auth_value' typref='2043437594'>
+<Attr>
+<Pos l='82' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2043437594'>
+<Attr>
+<Pos l='82' c='54' s='0'/>
+</Attr>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='82' c='23' s='31'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='82' c='55' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_atm_bank'>
+<Attr>
+<Pos l='87' c='5' s='10' endLine='92'/>
+</Attr>
+<Output_Parameters>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='87' c='5' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='87' c='33' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='89' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='89' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='89' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='91' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='91' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='3505119464'>
+<Attr>
+<Pos l='91' c='31' s='0'/>
+</Attr>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='91' c='23' s='8'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='91' c='32' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_atm_bank'>
+<Attr>
+<Pos l='95' c='5' s='12' endLine='101'/>
+</Attr>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='95' c='18' s='9'/>
+</Attr>
+</Id>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='95' c='29' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='97' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='97' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='97' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='98' c='22' s='1'/>
+</Attr>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='98' c='11' s='10'/>
+</Attr>
+</Id>
+<Id value='bank' typref='3780644081'>
+<Attr>
+<Pos l='98' c='24' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='100' c='29' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='3505119464'>
+<Attr>
+<Pos l='100' c='17' s='0'/>
+</Attr>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='100' c='9' s='8'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='100' c='18' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='bank_value' typref='3505119464'>
+<Attr>
+<Pos l='100' c='32' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='atm_insert_card'>
+<Attr>
+<Pos l='104' c='5' s='15' endLine='110'/>
+</Attr>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='104' c='21' s='9'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='104' c='32' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='106' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='106' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='106' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='107' c='22' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='107' c='11' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='107' c='24' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='109' c='38' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='1897436724'>
+<Attr>
+<Pos l='109' c='26' s='0'/>
+</Attr>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='109' c='9' s='17'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='109' c='27' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='109' c='41' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_atm_inserted_card'>
+<Attr>
+<Pos l='113' c='5' s='10' endLine='118'/>
+</Attr>
+<Output_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='113' c='5' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='113' c='42' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='115' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='115' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='115' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='117' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='117' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='1897436724'>
+<Attr>
+<Pos l='117' c='40' s='0'/>
+</Attr>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='117' c='23' s='17'/>
+</Attr>
+</Id>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='117' c='41' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='atm_remove_card'>
+<Attr>
+<Pos l='121' c='5' s='15' endLine='128'/>
+</Attr>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='121' c='21' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='123' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='123' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='123' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='124' c='21' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='124' c='11' s='9'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='3628986030'>
+<Attr>
+<Pos l='124' c='23' s='3'/>
+</Attr>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='124' c='27' s='17'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='126' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='126' c='9' s='17'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='2708174535'>
+<Attr>
+<Pos l='126' c='42' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3628986030'>
+<Attr>
+<Pos l='126' c='30' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='126' c='31' s='9'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='atm_inserted_card' typref='2708174535'>
+<Attr>
+<Pos l='126' c='46' s='17'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='127' c='44' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='127' c='12' s='31'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='961305441'>
+<Attr>
+<Pos l='127' c='59' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3628986030'>
+<Attr>
+<Pos l='127' c='47' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='127' c='48' s='9'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='atm_inserted_card_authenticated' typref='961305441'>
+<Attr>
+<Pos l='127' c='63' s='31'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='destroy_atm'>
+<Attr>
+<Pos l='131' c='5' s='11' endLine='138'/>
+</Attr>
+<Input_Parameters>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='131' c='17' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='133' c='19' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='133' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='133' c='21' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='135' c='13' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='135' c='9' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='3628986030'>
+<Attr>
+<Pos l='135' c='20' s='1'/>
+</Attr>
+<Id value='atm' typref='3628986030'>
+<Attr>
+<Pos l='135' c='16' s='3'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='3628986030'>
+<Attr>
+<Pos l='135' c='22' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='135' c='23' s='9'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='136' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='136' c='12' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='4142740787'>
+<Attr>
+<Pos l='136' c='34' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3628986030'>
+<Attr>
+<Pos l='136' c='22' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='136' c='23' s='9'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='atm_id' typref='4142740787'>
+<Attr>
+<Pos l='136' c='38' s='6'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='137' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='137' c='12' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='1787800339'>
+<Attr>
+<Pos l='137' c='36' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3628986030'>
+<Attr>
+<Pos l='137' c='24' s='1'/>
+</Attr>
+<Id value='atm_value' typref='2704304363'>
+<Attr>
+<Pos l='137' c='25' s='9'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='atm_bank' typref='1787800339'>
+<Attr>
+<Pos l='137' c='40' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3628986030'>
+<Unary_Exp op='POW'>
+<Id value='ATMs'/>
+</Unary_Exp>
+</Type>
+<Type id='4142740787'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1787800339'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='BANK'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2708174535'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='CARD'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='961305441'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='BOOL'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='514122982'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='830522672'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='BANK'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3780644081'>
+<Unary_Exp op='POW'>
+<Id value='BANK'/>
+</Unary_Exp>
+</Type>
+<Type id='3228664444'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='CARD'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3877768869'>
+<Unary_Exp op='POW'>
+<Id value='CARD'/>
+</Unary_Exp>
+</Type>
+<Type id='3238711906'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='ATMs'/>
+<Id value='BOOL'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4282494527'>
+<Unary_Exp op='POW'>
+<Id value='BOOL'/>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='2704304363'>
+<Id value='ATMs'/>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3505119464'>
+<Id value='BANK'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1897436724'>
+<Id value='CARD'/>
+</Type>
+</TypeInfos>
+
+</Machine>

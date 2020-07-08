@@ -1,0 +1,88 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_account.2,(_f(47) => _f(55));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_account.1,(_f(47) => _f(54));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_pin.2,(_f(47) => _f(53));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_pin.1,(_f(47) => _f(52));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_number.2,(_f(47) => _f(51));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_number.1,(_f(47) => _f(50));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_code.2,(_f(47) => _f(49));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & WellDefinedness_get_card_code.1,(_f(47) => _f(48));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & destroy_card.5,(_f(4) & _f(11) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & destroy_card.4,(_f(4) & _f(19) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & destroy_card.3,(_f(4) & _f(9) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & destroy_card.2,(_f(4) & _f(7) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(22) & destroy_card.1,(_f(4) & _f(5) => _f(29));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(27) & set_card_account.1,(_f(4) & _f(11) => _f(28));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(25) & set_card_pin.1,(_f(4) & _f(19) => _f(26));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(23) & set_card_number.1,(_f(4) & _f(7) => _f(24));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & create_card.5,(_f(15) & _f(4) & _f(11) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & create_card.4,(_f(15) & _f(4) & _f(19) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & create_card.3,(_f(15) & _f(4) & _f(9) => _f(18));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & create_card.2,(_f(15) & _f(4) & _f(7) => _f(17));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & create_card.1,(_f(15) & _f(4) & _f(5) => _f(16));
+_f(1) & _f(2) & _f(3) & Initialisation.4,(_f(4) & _f(11) => _f(12));
+_f(1) & _f(2) & _f(3) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+STR: FIN(INTEGER) & not(STR = {});
+CARD: FIN(INTEGER) & not(CARD = {});
+"Invariant is preserved";
+"Check invariant cards : POW( CARD)";
+{} : POW( CARD);
+"Check invariant ((card_number) : (((cards) >-> (STR))))";
+(({}) : ((({}) >-> (STR))));
+"Check invariant ((card_code) : (((cards) --> ((NATURAL-{0})))))";
+(({}) : ((({}) --> ((NATURAL-{0})))));
+"Check invariant ((card_account) : (((cards) --> (account))))";
+(({}) : ((({}) --> (account))));
+cards : POW( CARD) & card_number : cards +-> STR & card_number : cards --> STR & card_number~ : STR +-> cards & ((card_number) : (((cards) >-> (STR)))) & card_code : cards +-> (NATURAL-{0}) & dom(card_code) = cards & ((card_code) : (((cards) --> ((NATURAL-{0}))))) & card_pin : cards +-> (NATURAL-{0}) & dom(card_pin) = cards & ((card_pin) : (((cards) --> ((NATURAL-{0}))))) & card_account : cards +-> account & dom(card_account) = cards & ((card_account) : (((cards) --> (account))));
+((code_value) : ((NATURAL-{0}))) & not(code_value : ran(card_code)) & ((number_value) : (STR));
+((new_card) : ((CARD - cards)));
+((cards) \/ (({new_card}))) : POW( CARD);
+((((card_number) <+ (({((new_card) |-> (number_value))})))) : (((((cards) \/ (({new_card})))) >-> (STR))));
+((((card_code) <+ (({((new_card) |-> (code_value))})))) : (((((cards) \/ (({new_card})))) --> ((NATURAL-{0})))));
+"Check invariant ((card_pin) : (((cards) --> ((NATURAL-{0})))))";
+((card_pin) : (((((cards) \/ (({new_card})))) --> ((NATURAL-{0})))));
+((card_account) : (((((cards) \/ (({new_card})))) --> (account))));
+((card_value) : (cards));
+((card_value) : (cards)) & ((number_value) : (STR));
+((((card_number) <+ (({((card_value) |-> (number_value))})))) : (((cards) >-> (STR))));
+((card_value) : (cards)) & ((pin_value) : ((NATURAL-{0})));
+((((card_pin) <+ (({((card_value) |-> (pin_value))})))) : (((cards) --> ((NATURAL-{0})))));
+((card_value) : (cards)) & ((account_value) : (account));
+((((card_account) <+ (({((card_value) |-> (account_value))})))) : (((cards) --> (account))));
+(cards - ({card_value})) : POW( CARD);
+((((({card_value})) <<| (card_number))) : ((((cards - ({card_value}))) >-> (STR))));
+((((({card_value})) <<| (card_code))) : ((((cards - ({card_value}))) --> ((NATURAL-{0})))));
+((((({card_value})) <<| (card_pin))) : ((((cards - ({card_value}))) --> ((NATURAL-{0})))));
+((((({card_value})) <<| (card_account))) : ((((cards - ({card_value}))) --> (account))));
+card_pin : cards +-> (NATURAL-{0});
+dom(card_pin) = cards;
+((card_pin) : (((cards) --> ((NATURAL-{0})))));
+card_code : cards +-> (NATURAL-{0});
+dom(card_code) = cards;
+((card_code) : (((cards) --> ((NATURAL-{0})))));
+card_number : cards +-> STR;
+card_number : cards --> STR;
+card_number~ : STR +-> cards;
+((card_number) : (((cards) >-> (STR))));
+cards : POW( CARD);
+not(code_value : ran(card_code));
+((code_value) : ((NATURAL-{0})));
+"Well definedness";
+((card_value) : (dom(card_code)));
+((card_code) : (((dom(card_code)) +-> (ran(card_code)))));
+((card_value) : (dom(card_number)));
+((card_number) : (((dom(card_number)) +-> (ran(card_number)))));
+((card_value) : (dom(card_pin)));
+((card_pin) : (((dom(card_pin)) +-> (ran(card_pin)))));
+((card_value) : (dom(card_account)));
+((card_account) : (((dom(card_account)) +-> (ran(card_account)))))
+END
+&
+THEORY EnumerateX
+END

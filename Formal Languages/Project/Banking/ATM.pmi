@@ -1,0 +1,114 @@
+﻿THEORY BalanceX IS
+  ATM,28,0,0,21,0,0,0;
+  Initialisation,5,0,0,5,0,0,0;
+  WellDefinedness_get_atm_bank,2,0,0,2,0,0,0;
+  WellDefinedness_get_atm_card_authenticated,2,0,0,2,0,0,0;
+  WellDefinedness_get_atm_id,2,0,0,2,0,0,0;
+  WellDefinedness_get_atm_inserted_card,2,0,0,2,0,0,0;
+  atm_insert_card,1,0,0,0,0,0,0;
+  atm_remove_card,2,0,0,0,0,0,0;
+  create_atm,5,0,0,3,0,0,0;
+  destroy_atm,5,0,0,3,0,0,0;
+  set_atm_bank,1,0,0,1,0,0,0;
+  set_atm_card_authenticated,1,0,0,1,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  pr;
+  ?;
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "svn")
+END

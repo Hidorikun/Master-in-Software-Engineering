@@ -1,0 +1,275 @@
+<Machine name='System' type='abstraction'>
+<Includes>
+<Attr>
+<Pos l='11' c='1' s='8'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='12' c='5' s='3'/>
+</Attr>
+<Name>ATM</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='13' c='5' s='7'/>
+</Attr>
+<Name>Account</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='14' c='5' s='4'/>
+</Attr>
+<Name>Bank</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='15' c='5' s='4'/>
+</Attr>
+<Name>Card</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='16' c='5' s='8'/>
+</Attr>
+<Name>Customer</Name>
+</Referenced_Machine>
+</Includes>
+<Promotes>
+<Attr>
+<Pos l='18' c='1' s='8'/>
+</Attr>
+<Promoted_Operation>
+<Attr>
+<Pos l='19' c='5' s='14'/>
+</Attr>create_account
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='20' c='5' s='14'/>
+</Attr>get_account_id
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='21' c='5' s='20'/>
+</Attr>get_account_currency
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='22' c='5' s='20'/>
+</Attr>set_account_currency
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='23' c='5' s='16'/>
+</Attr>get_account_bank
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='24' c='5' s='18'/>
+</Attr>get_account_amount
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='25' c='5' s='23'/>
+</Attr>withdraw_account_amount
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='26' c='5' s='20'/>
+</Attr>get_account_customer
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='27' c='5' s='20'/>
+</Attr>set_account_customer
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='28' c='5' s='15'/>
+</Attr>destroy_account
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='29' c='5' s='10'/>
+</Attr>create_atm
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='30' c='5' s='10'/>
+</Attr>get_atm_id
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='31' c='5' s='26'/>
+</Attr>set_atm_card_authenticated
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='32' c='5' s='26'/>
+</Attr>get_atm_card_authenticated
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='33' c='5' s='12'/>
+</Attr>get_atm_bank
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='34' c='5' s='12'/>
+</Attr>set_atm_bank
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='35' c='5' s='15'/>
+</Attr>atm_insert_card
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='36' c='5' s='21'/>
+</Attr>get_atm_inserted_card
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='37' c='5' s='15'/>
+</Attr>atm_remove_card
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='38' c='5' s='11'/>
+</Attr>destroy_atm
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='39' c='5' s='11'/>
+</Attr>create_bank
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='40' c='5' s='13'/>
+</Attr>get_bank_code
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='41' c='5' s='13'/>
+</Attr>get_bank_name
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='42' c='5' s='13'/>
+</Attr>set_bank_name
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='43' c='5' s='12'/>
+</Attr>destroy_bank
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='44' c='5' s='11'/>
+</Attr>create_card
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='45' c='5' s='13'/>
+</Attr>get_card_code
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='46' c='5' s='15'/>
+</Attr>get_card_number
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='47' c='5' s='15'/>
+</Attr>set_card_number
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='48' c='5' s='12'/>
+</Attr>get_card_pin
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='49' c='5' s='12'/>
+</Attr>set_card_pin
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='50' c='5' s='16'/>
+</Attr>get_card_account
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='51' c='5' s='16'/>
+</Attr>set_card_account
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='52' c='5' s='12'/>
+</Attr>destroy_card
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='53' c='5' s='15'/>
+</Attr>create_customer
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='54' c='5' s='15'/>
+</Attr>get_customer_id
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='55' c='5' s='17'/>
+</Attr>get_customer_name
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='56' c='5' s='17'/>
+</Attr>set_customer_name
+</Promoted_Operation>
+<Promoted_Operation>
+<Attr>
+<Pos l='57' c='5' s='16'/>
+</Attr>destroy_customer
+</Promoted_Operation>
+</Promotes>
+<Sets>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='PIN_STATES' typref='60114145'>
+<Attr>
+<Pos l='9' c='5' s='10'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='CORRECT_PIN' typref='4126415992'>
+<Attr>
+<Pos l='9' c='20' s='11'/>
+</Attr>
+</Id>
+<Id value='INCORRECT_PIN' typref='4126415992'>
+<Attr>
+<Pos l='9' c='33' s='13'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='60114145'>
+<Unary_Exp op='POW'>
+<Id value='PIN_STATES'/>
+</Unary_Exp>
+</Type>
+<Type id='4126415992'>
+<Id value='PIN_STATES'/>
+</Type>
+</TypeInfos>
+
+</Machine>

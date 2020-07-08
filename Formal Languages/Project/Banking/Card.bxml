@@ -1,0 +1,1337 @@
+<Machine name='Card' type='abstraction'>
+<Sees>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='5' s='6'/>
+</Attr>
+<Name>String</Name>
+</Referenced_Machine>
+</Sees>
+<Uses>
+<Attr>
+<Pos l='11' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='12' c='5' s='7'/>
+</Attr>
+<Name>Account</Name>
+</Referenced_Machine>
+</Uses>
+<Sets>
+<Attr>
+<Pos l='14' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='CARD' typref='3877768869'>
+<Attr>
+<Pos l='15' c='5' s='4'/>
+</Attr>
+</Id>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Attr>
+<Pos l='17' c='1' s='18'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='18' c='5' s='5'/>
+</Attr>
+</Id>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='19' c='5' s='11'/>
+</Attr>
+</Id>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='20' c='5' s='8'/>
+</Attr>
+</Id>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='21' c='5' s='9'/>
+</Attr>
+</Id>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='22' c='5' s='12'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='24' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='25' c='11' s='2'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='25' c='5' s='5'/>
+</Attr>
+</Id>
+<Id value='CARD' typref='3877768869'>
+<Attr>
+<Pos l='25' c='14' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='26' c='18' s='1'/>
+</Attr>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='26' c='7' s='11'/>
+</Attr>
+</Id>
+<Binary_Exp op='&gt;-&gt;' typref='1998194172'>
+<Attr>
+<Pos l='26' c='26' s='3'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='26' c='20' s='5'/>
+</Attr>
+</Id>
+<Id value='STR' typref='116733260'>
+<Attr>
+<Pos l='26' c='30' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='27' c='16' s='1'/>
+</Attr>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='27' c='7' s='9'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='2018825903'>
+<Attr>
+<Pos l='27' c='24' s='3'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='27' c='18' s='5'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='27' c='28' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='28' c='15' s='1'/>
+</Attr>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='28' c='7' s='8'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='2018825903'>
+<Attr>
+<Pos l='28' c='23' s='3'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='28' c='17' s='5'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='28' c='27' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='29' c='19' s='1'/>
+</Attr>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='29' c='7' s='12'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='1598422528'>
+<Attr>
+<Pos l='29' c='27' s='3'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='29' c='21' s='5'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='29' c='31' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='32' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='33' c='11' s='2'/>
+</Attr>
+<Variables>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='33' c='5' s='5'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='33' c='14' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='34' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='34' c='8' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='34' c='23' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='35' c='18' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='35' c='8' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='35' c='21' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='36' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='36' c='8' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='36' c='20' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='37' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='37' c='8' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='37' c='24' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='create_card'>
+<Attr>
+<Pos l='43' c='5' s='10' endLine='57'/>
+</Attr>
+<Output_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='43' c='5' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='code_value' typref='2701647786'>
+<Attr>
+<Pos l='43' c='32' s='10'/>
+</Attr>
+</Id>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='43' c='44' s='12'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='45' c='20' s='1'/>
+</Attr>
+<Id value='code_value' typref='2701647786'>
+<Attr>
+<Pos l='45' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='45' c='22' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='46' c='22' s='2'/>
+</Attr>
+<Id value='code_value' typref='2701647786'>
+<Attr>
+<Pos l='46' c='11' s='10'/>
+</Attr>
+</Id>
+<Unary_Exp op='ran' typref='3603043417'>
+<Attr>
+<Pos l='46' c='25' s='3'/>
+</Attr>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='46' c='29' s='9'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='47' c='24' s='1'/>
+</Attr>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='47' c='11' s='12'/>
+</Attr>
+</Id>
+<Id value='STR' typref='116733260'>
+<Attr>
+<Pos l='47' c='26' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<ANY_Sub>
+<Attr>
+<Pos l='49' c='9' s='3'/>
+</Attr>
+<Variables>
+<Id value='new_card' typref='1897436724'>
+<Attr>
+<Pos l='49' c='13' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='50' c='22' s='1'/>
+</Attr>
+<Id value='new_card' typref='1897436724'>
+<Attr>
+<Pos l='50' c='13' s='8'/>
+</Attr>
+</Id>
+<Binary_Exp op='-' typref='3877768869'>
+<Attr>
+<Pos l='50' c='29' s='1'/>
+</Attr>
+<Id value='CARD' typref='3877768869'>
+<Attr>
+<Pos l='50' c='24' s='4'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='50' c='31' s='5'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Then>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='52' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='52' c='13' s='5'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3877768869'>
+<Attr>
+<Pos l='52' c='28' s='2'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='52' c='22' s='5'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='3877768869'>
+<Attr>
+<Pos l='52' c='31' s='1'/>
+</Attr>
+<Id value='new_card' typref='1897436724'>
+<Attr>
+<Pos l='52' c='32' s='8'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='53' c='36' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='53' c='25' s='0'/>
+</Attr>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='53' c='16' s='9'/>
+</Attr>
+</Id>
+<Id value='new_card' typref='1897436724'>
+<Attr>
+<Pos l='53' c='26' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='code_value' typref='2701647786'>
+<Attr>
+<Pos l='53' c='39' s='10'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='54' c='38' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2678451703'>
+<Attr>
+<Pos l='54' c='27' s='0'/>
+</Attr>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='54' c='16' s='11'/>
+</Attr>
+</Id>
+<Id value='new_card' typref='1897436724'>
+<Attr>
+<Pos l='54' c='28' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='54' c='41' s='12'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='55' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='55' c='16' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='new_card' typref='1897436724'>
+<Attr>
+<Pos l='55' c='30' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Body>
+</Operation>
+<Operation name='get_card_code'>
+<Attr>
+<Pos l='61' c='5' s='10' endLine='66'/>
+</Attr>
+<Output_Parameters>
+<Id value='code_value' typref='2701647786'>
+<Attr>
+<Pos l='61' c='5' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='61' c='34' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='63' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='63' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='63' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='65' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='code_value' typref='2701647786'>
+<Attr>
+<Pos l='65' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='65' c='32' s='0'/>
+</Attr>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='65' c='23' s='9'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='65' c='33' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_card_number'>
+<Attr>
+<Pos l='69' c='5' s='12' endLine='74'/>
+</Attr>
+<Output_Parameters>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='69' c='5' s='12'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='69' c='38' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='71' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='71' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='71' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='73' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='73' c='9' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2678451703'>
+<Attr>
+<Pos l='73' c='36' s='0'/>
+</Attr>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='73' c='25' s='11'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='73' c='37' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_card_number'>
+<Attr>
+<Pos l='77' c='5' s='15' endLine='83'/>
+</Attr>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='77' c='21' s='10'/>
+</Attr>
+</Id>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='77' c='33' s='12'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='79' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='79' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='79' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='80' c='24' s='1'/>
+</Attr>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='80' c='11' s='12'/>
+</Attr>
+</Id>
+<Id value='STR' typref='116733260'>
+<Attr>
+<Pos l='80' c='26' s='3'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='82' c='33' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2678451703'>
+<Attr>
+<Pos l='82' c='20' s='0'/>
+</Attr>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='82' c='9' s='11'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='82' c='21' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='number_value' typref='2678451703'>
+<Attr>
+<Pos l='82' c='36' s='12'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_card_pin'>
+<Attr>
+<Pos l='86' c='5' s='9' endLine='91'/>
+</Attr>
+<Output_Parameters>
+<Id value='pin_value' typref='2701647786'>
+<Attr>
+<Pos l='86' c='5' s='9'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='86' c='32' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='88' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='88' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='88' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='90' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='pin_value' typref='2701647786'>
+<Attr>
+<Pos l='90' c='17' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='90' c='38' s='0'/>
+</Attr>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='90' c='30' s='8'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='90' c='39' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_card_pin'>
+<Attr>
+<Pos l='94' c='5' s='12' endLine='100'/>
+</Attr>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='94' c='18' s='10'/>
+</Attr>
+</Id>
+<Id value='pin_value' typref='2701647786'>
+<Attr>
+<Pos l='94' c='30' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='96' c='28' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='96' c='17' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='96' c='30' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='97' c='29' s='1'/>
+</Attr>
+<Id value='pin_value' typref='2701647786'>
+<Attr>
+<Pos l='97' c='19' s='9'/>
+</Attr>
+</Id>
+<Id value='NATURAL1' typref='3603043417'>
+<Attr>
+<Pos l='97' c='31' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='99' c='37' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='99' c='24' s='0'/>
+</Attr>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='99' c='16' s='8'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='99' c='25' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='pin_value' typref='2701647786'>
+<Attr>
+<Pos l='99' c='40' s='9'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_card_account'>
+<Attr>
+<Pos l='103' c='5' s='13' endLine='108'/>
+</Attr>
+<Output_Parameters>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='103' c='5' s='13'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='103' c='40' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='105' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='105' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='105' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='107' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='107' c='9' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2223075579'>
+<Attr>
+<Pos l='107' c='38' s='0'/>
+</Attr>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='107' c='26' s='12'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='107' c='39' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='set_card_account'>
+<Attr>
+<Pos l='111' c='5' s='16' endLine='117'/>
+</Attr>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='111' c='22' s='10'/>
+</Attr>
+</Id>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='111' c='34' s='13'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='113' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='113' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='113' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='114' c='25' s='1'/>
+</Attr>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='114' c='11' s='13'/>
+</Attr>
+</Id>
+<Id value='account' typref='722135624'>
+<Attr>
+<Pos l='114' c='27' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='116' c='34' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2223075579'>
+<Attr>
+<Pos l='116' c='21' s='0'/>
+</Attr>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='116' c='9' s='12'/>
+</Attr>
+</Id>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='116' c='22' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='account_value' typref='2223075579'>
+<Attr>
+<Pos l='116' c='37' s='13'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='destroy_card'>
+<Attr>
+<Pos l='120' c='5' s='12' endLine='129'/>
+</Attr>
+<Input_Parameters>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='120' c='18' s='10'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='122' c='20' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='122' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='122' c='22' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='124' c='15' s='2'/>
+</Attr>
+<Variables>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='124' c='9' s='5'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='3877768869'>
+<Attr>
+<Pos l='124' c='24' s='1'/>
+</Attr>
+<Id value='cards' typref='3877768869'>
+<Attr>
+<Pos l='124' c='18' s='5'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='3877768869'>
+<Attr>
+<Pos l='124' c='26' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='124' c='27' s='10'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='125' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='125' c='12' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='882066986'>
+<Attr>
+<Pos l='125' c='38' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3877768869'>
+<Attr>
+<Pos l='125' c='25' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='125' c='26' s='10'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='card_code' typref='882066986'>
+<Attr>
+<Pos l='125' c='42' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='126' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='126' c='12' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='1546966941'>
+<Attr>
+<Pos l='126' c='40' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3877768869'>
+<Attr>
+<Pos l='126' c='27' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='126' c='28' s='10'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='card_number' typref='1546966941'>
+<Attr>
+<Pos l='126' c='44' s='11'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='127' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='127' c='12' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='882066986'>
+<Attr>
+<Pos l='127' c='37' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3877768869'>
+<Attr>
+<Pos l='127' c='24' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='127' c='25' s='10'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='card_pin' typref='882066986'>
+<Attr>
+<Pos l='127' c='41' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='128' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='128' c='12' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='2580326297'>
+<Attr>
+<Pos l='128' c='41' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='3877768869'>
+<Attr>
+<Pos l='128' c='28' s='1'/>
+</Attr>
+<Id value='card_value' typref='1897436724'>
+<Attr>
+<Pos l='128' c='29' s='10'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='card_account' typref='2580326297'>
+<Attr>
+<Pos l='128' c='45' s='12'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3877768869'>
+<Unary_Exp op='POW'>
+<Id value='CARD'/>
+</Unary_Exp>
+</Type>
+<Type id='1546966941'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='CARD'/>
+<Id value='STR'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='882066986'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='CARD'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2580326297'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='CARD'/>
+<Id value='ACCOUNT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1998194172'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='CARD'/>
+<Id value='STR'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='116733260'>
+<Unary_Exp op='POW'>
+<Id value='STR'/>
+</Unary_Exp>
+</Type>
+<Type id='2018825903'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='CARD'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='1598422528'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='CARD'/>
+<Id value='ACCOUNT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='722135624'>
+<Unary_Exp op='POW'>
+<Id value='ACCOUNT'/>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='1897436724'>
+<Id value='CARD'/>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2678451703'>
+<Id value='STR'/>
+</Type>
+<Type id='2223075579'>
+<Id value='ACCOUNT'/>
+</Type>
+</TypeInfos>
+
+</Machine>

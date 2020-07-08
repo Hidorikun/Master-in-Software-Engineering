@@ -1,0 +1,55 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_customer_name.2,(_f(29) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_customer_name.1,(_f(29) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_customer_id.2,(_f(29) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_customer_id.1,(_f(29) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & destroy_customer.3,(_f(4) & _f(9) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & destroy_customer.2,(_f(4) & _f(7) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & destroy_customer.1,(_f(4) & _f(5) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(18) & set_customer_name.1,(_f(4) & _f(7) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(12) & create_customer.3,(_f(13) & _f(4) & _f(9) => _f(16));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(12) & create_customer.2,(_f(13) & _f(4) & _f(7) => _f(15));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(12) & create_customer.1,(_f(13) & _f(4) & _f(5) => _f(14));
+_f(1) & _f(2) & _f(3) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+STR: FIN(INTEGER) & not(STR = {});
+CUSTOMER: FIN(INTEGER) & not(CUSTOMER = {});
+"Invariant is preserved";
+"Check invariant customer : POW( CUSTOMER)";
+{} : POW( CUSTOMER);
+"Check invariant ((customer_name) : (((customer) --> (STR))))";
+(({}) : ((({}) --> (STR))));
+"Check invariant ((customer_id) : (((customer) >-> ((NATURAL-{0})))))";
+(({}) : ((({}) >-> ((NATURAL-{0})))));
+customer : POW( CUSTOMER) & customer_name : customer +-> STR & dom(customer_name) = customer & ((customer_name) : (((customer) --> (STR)))) & customer_id : customer +-> (NATURAL-{0}) & customer_id : customer --> (NATURAL-{0}) & customer_id~ : (NATURAL-{0}) +-> customer & ((customer_id) : (((customer) >-> ((NATURAL-{0})))));
+((id_value) : ((NATURAL-{0}))) & not(id_value : ran(customer_id)) & ((name_value) : (STR));
+((new_customer) : ((CUSTOMER - customer)));
+((customer) \/ (({new_customer}))) : POW( CUSTOMER);
+((((customer_name) <+ (({((new_customer) |-> (name_value))})))) : (((((customer) \/ (({new_customer})))) --> (STR))));
+((((customer_id) <+ (({((new_customer) |-> (id_value))})))) : (((((customer) \/ (({new_customer})))) >-> ((NATURAL-{0})))));
+((customer_value) : (customer));
+((customer_value) : (customer)) & ((name_value) : (STR));
+((((customer_name) <+ (({((customer_value) |-> (name_value))})))) : (((customer) --> (STR))));
+(customer - ({customer_value})) : POW( CUSTOMER);
+((((({customer_value})) <<| (customer_name))) : ((((customer - ({customer_value}))) --> (STR))));
+((((({customer_value})) <<| (customer_id))) : ((((customer - ({customer_value}))) >-> ((NATURAL-{0})))));
+customer_name : customer +-> STR;
+dom(customer_name) = customer;
+((customer_name) : (((customer) --> (STR))));
+customer : POW( CUSTOMER);
+not(id_value : ran(customer_id));
+((id_value) : ((NATURAL-{0})));
+"Well definedness";
+((customer_value) : (dom(customer_id)));
+((customer_id) : (((dom(customer_id)) +-> (ran(customer_id)))));
+((customer_value) : (dom(customer_name)));
+((customer_name) : (((dom(customer_name)) +-> (ran(customer_name)))))
+END
+&
+THEORY EnumerateX
+END

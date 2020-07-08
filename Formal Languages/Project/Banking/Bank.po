@@ -1,0 +1,55 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_bank_name.2,(_f(29) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_bank_name.1,(_f(29) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_bank_code.2,(_f(29) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & WellDefinedness_get_bank_code.1,(_f(29) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & destroy_bank.3,(_f(4) & _f(9) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & destroy_bank.2,(_f(4) & _f(7) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(17) & destroy_bank.1,(_f(4) & _f(5) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(18) & set_bank_name.1,(_f(4) & _f(7) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(12) & create_bank.3,(_f(13) & _f(4) & _f(9) => _f(16));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(12) & create_bank.2,(_f(13) & _f(4) & _f(7) => _f(15));
+_f(1) & _f(2) & _f(3) & _f(11) & _f(12) & create_bank.1,(_f(13) & _f(4) & _f(5) => _f(14));
+_f(1) & _f(2) & _f(3) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+STR: FIN(INTEGER) & not(STR = {});
+BANK: FIN(INTEGER) & not(BANK = {});
+"Invariant is preserved";
+"Check invariant bank : POW( BANK)";
+{} : POW( BANK);
+"Check invariant ((bank_name) : (((bank) --> (STR))))";
+(({}) : ((({}) --> (STR))));
+"Check invariant ((bank_code) : (((bank) >-> ((NATURAL-{0})))))";
+(({}) : ((({}) >-> ((NATURAL-{0})))));
+bank : POW( BANK) & bank_name : bank +-> STR & dom(bank_name) = bank & ((bank_name) : (((bank) --> (STR)))) & bank_code : bank +-> (NATURAL-{0}) & bank_code : bank --> (NATURAL-{0}) & bank_code~ : (NATURAL-{0}) +-> bank & ((bank_code) : (((bank) >-> ((NATURAL-{0})))));
+((code_value) : ((NATURAL-{0}))) & not(code_value : ran(bank_code)) & ((name_value) : (STR));
+((new_bank) : ((BANK - bank)));
+((bank) \/ (({new_bank}))) : POW( BANK);
+((((bank_name) <+ (({((new_bank) |-> (name_value))})))) : (((((bank) \/ (({new_bank})))) --> (STR))));
+((((bank_code) <+ (({((new_bank) |-> (code_value))})))) : (((((bank) \/ (({new_bank})))) >-> ((NATURAL-{0})))));
+((bank_value) : (bank));
+((bank_value) : (bank)) & ((name_value) : (STR));
+((((bank_name) <+ (({((bank_value) |-> (name_value))})))) : (((bank) --> (STR))));
+(bank - ({bank_value})) : POW( BANK);
+((((({bank_value})) <<| (bank_name))) : ((((bank - ({bank_value}))) --> (STR))));
+((((({bank_value})) <<| (bank_code))) : ((((bank - ({bank_value}))) >-> ((NATURAL-{0})))));
+bank_name : bank +-> STR;
+dom(bank_name) = bank;
+((bank_name) : (((bank) --> (STR))));
+bank : POW( BANK);
+not(code_value : ran(bank_code));
+((code_value) : ((NATURAL-{0})));
+"Well definedness";
+((bank_value) : (dom(bank_code)));
+((bank_code) : (((dom(bank_code)) +-> (ran(bank_code)))));
+((bank_value) : (dom(bank_name)));
+((bank_name) : (((dom(bank_name)) +-> (ran(bank_name)))))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,1491 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx">
+<Attr>
+<Pos c="1" l="8" s="4"/>
+</Attr>
+<Set>
+<Id value="STR" tag="C:/Users/george/Desktop/formale/Banking\String.bxml:1:1:1:1" typref="116733260">
+<Attr>
+<Pos c="5" l="9" s="3"/>
+</Attr>
+</Id>
+</Set>
+</Define>
+<Define name="seext"/>
+<Define name="lprp">
+<Attr>
+<Pos c="1" l="11" s="4"/>
+</Attr>
+<Set>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="12" s="4"/>
+</Attr>
+</Id>
+</Set>
+</Define>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="inv">
+<Attr>
+<Pos c="1" l="19" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)">
+<Attr>
+<Pos c="10" l="20" s="2"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="20" s="4"/>
+</Attr>
+</Id>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="13" l="20" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --> (STR))))">
+<Attr>
+<Pos c="16" l="21" s="1"/>
+</Attr>
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:1" typref="3861673449">
+<Attr>
+<Pos c="7" l="21" s="9"/>
+</Attr>
+</Id>
+<Binary_Exp op="-->" typref="1135500976">
+<Attr>
+<Pos c="23" l="21" s="3"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:1" typref="3780644081">
+<Attr>
+<Pos c="18" l="21" s="4"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:2" typref="116733260">
+<Attr>
+<Pos c="27" l="21" s="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((bank_code) : (((bank) >-> ((NATURAL-{0})))))">
+<Attr>
+<Pos c="16" l="22" s="1"/>
+</Attr>
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:1" typref="1951996022">
+<Attr>
+<Pos c="7" l="22" s="9"/>
+</Attr>
+</Id>
+<Binary_Exp op=">->" typref="868481891">
+<Attr>
+<Pos c="23" l="22" s="3"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:1" typref="3780644081">
+<Attr>
+<Pos c="18" l="22" s="4"/>
+</Attr>
+</Id>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:2" typref="3603043417">
+<Attr>
+<Pos c="27" l="22" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="10" l="20" s="2"/>
+</Attr>
+<EmptySet tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="25" s="4"/>
+</Attr>
+</EmptySet>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="13" l="20" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --> (STR))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="21" s="1"/>
+</Attr>
+<EmptySet tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:2:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:2:1:1" typref="3861673449">
+<Attr>
+<Pos c="8" l="26" s="9"/>
+</Attr>
+</EmptySet>
+<Binary_Exp op="-->" typref="1135500976">
+<Attr>
+<Pos c="23" l="21" s="3"/>
+</Attr>
+<EmptySet tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="25" s="4"/>
+</Attr>
+</EmptySet>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:2" typref="116733260">
+<Attr>
+<Pos c="27" l="21" s="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((bank_code) : (((bank) >-> ((NATURAL-{0})))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="22" s="1"/>
+</Attr>
+<EmptySet tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:3:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:3:1:1" typref="1951996022">
+<Attr>
+<Pos c="8" l="27" s="9"/>
+</Attr>
+</EmptySet>
+<Binary_Exp op=">->" typref="868481891">
+<Attr>
+<Pos c="23" l="22" s="3"/>
+</Attr>
+<EmptySet tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:5:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="25" s="4"/>
+</Attr>
+</EmptySet>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:2" typref="3603043417">
+<Attr>
+<Pos c="27" l="22" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>create_bank</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="34" s="1"/>
+</Attr>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:1:1" typref="2701647786">
+<Attr>
+<Pos c="9" l="34" s="10"/>
+</Attr>
+</Id>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:1:2" typref="3603043417">
+<Attr>
+<Pos c="22" l="34" s="8"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" l="35" s="2"/>
+</Attr>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:2:1" typref="2701647786">
+<Attr>
+<Pos c="11" l="35" s="10"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos c="25" l="35" s="3"/>
+</Attr>
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:2:2:1" typref="1951996022">
+<Attr>
+<Pos c="29" l="35" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" l="36" s="1"/>
+</Attr>
+<Id value="name_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:3:1" typref="2678451703">
+<Attr>
+<Pos c="11" l="36" s="10"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:3:2" typref="116733260">
+<Attr>
+<Pos c="24" l="36" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" l="39" s="1"/>
+</Attr>
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:2:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1" suffix="" typref="3505119464">
+<Attr>
+<Pos c="13" l="38" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="-" typref="3780644081">
+<Attr>
+<Pos c="29" l="39" s="1"/>
+</Attr>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:2:1:2:1" typref="3780644081">
+<Attr>
+<Pos c="24" l="39" s="4"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:2:1:2:2" typref="3780644081">
+<Attr>
+<Pos c="31" l="39" s="4"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="10" l="20" s="2"/>
+</Attr>
+<Binary_Exp op="\/" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="13" l="41" s="4"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="21" l="41" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="29" l="41" s="1"/>
+</Attr>
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:2:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1" suffix="" typref="3505119464">
+<Attr>
+<Pos c="13" l="38" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="13" l="20" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --> (STR))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="21" s="1"/>
+</Attr>
+<Binary_Exp op="&lt;+" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:3:1:1:1" typref="3861673449">
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:3:1:1:1" typref="3861673449">
+<Attr>
+<Pos c="16" l="43" s="9"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:3:1:1:2,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1" suffix="" typref="3505119464">
+<Attr>
+<Pos c="13" l="38" s="8"/>
+</Attr>
+</Id>
+<Id value="name_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:3:2:1" typref="2678451703">
+<Attr>
+<Pos c="39" l="43" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="1135500976">
+<Attr>
+<Pos c="23" l="21" s="3"/>
+</Attr>
+<Binary_Exp op="\/" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="13" l="41" s="4"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="21" l="41" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="29" l="41" s="1"/>
+</Attr>
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:2:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1" suffix="" typref="3505119464">
+<Attr>
+<Pos c="13" l="38" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:2" typref="116733260">
+<Attr>
+<Pos c="27" l="21" s="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op=":" initialTag="((bank_code) : (((bank) >-> ((NATURAL-{0})))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="22" s="1"/>
+</Attr>
+<Binary_Exp op="&lt;+" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:2:1:1:1" typref="1951996022">
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:2:1:1:1" typref="1951996022">
+<Attr>
+<Pos c="16" l="42" s="9"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:2:1:1:2,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1" suffix="" typref="3505119464">
+<Attr>
+<Pos c="13" l="38" s="8"/>
+</Attr>
+</Id>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:2:2:1" typref="2701647786">
+<Attr>
+<Pos c="39" l="42" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op=">->" typref="868481891">
+<Attr>
+<Pos c="23" l="22" s="3"/>
+</Attr>
+<Binary_Exp op="\/" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="13" l="41" s="4"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="21" l="41" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="29" l="41" s="1"/>
+</Attr>
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:3:1:1:2:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:1:1" suffix="" typref="3505119464">
+<Attr>
+<Pos c="13" l="38" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:2" typref="3603043417">
+<Attr>
+<Pos c="27" l="22" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_bank_code</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="52" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:3:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="52" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:3:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="52" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_bank_name</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="60" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:3:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="60" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:3:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="60" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>set_bank_name</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="68" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="68" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="68" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" l="69" s="1"/>
+</Attr>
+<Id value="name_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:2:1" typref="2678451703">
+<Attr>
+<Pos c="11" l="69" s="10"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:2:2" typref="116733260">
+<Attr>
+<Pos c="24" l="69" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --> (STR))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="21" s="1"/>
+</Attr>
+<Binary_Exp op="&lt;+" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:3:1:1:1:1" typref="3861673449">
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:3:1:1:1:1" typref="3861673449">
+<Attr>
+<Pos c="9" l="71" s="9"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:3:1:1:1:2" typref="3505119464">
+<Attr>
+<Pos c="19" l="71" s="10"/>
+</Attr>
+</Id>
+<Id value="name_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:3:1:2:1" typref="2678451703">
+<Attr>
+<Pos c="34" l="71" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="1135500976">
+<Attr>
+<Pos c="23" l="21" s="3"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:1" typref="3780644081">
+<Attr>
+<Pos c="18" l="21" s="4"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:2" typref="116733260">
+<Attr>
+<Pos c="27" l="21" s="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>destroy_bank</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="78" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:2:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="78" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:2:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="78" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="10" l="20" s="2"/>
+</Attr>
+<Binary_Exp op="-" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="9" l="80" s="4"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="17" l="80" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="24" l="80" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:2:1:2:1" typref="3505119464">
+<Attr>
+<Pos c="25" l="80" s="10"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="13" l="20" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --> (STR))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="21" s="1"/>
+</Attr>
+<Binary_Exp op="&lt;&lt;|" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:3:1:1" typref="3861673449">
+<Attr>
+<Pos c="12" l="82" s="9"/>
+</Attr>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="25" l="82" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:3:2:1:1:1" typref="3505119464">
+<Attr>
+<Pos c="26" l="82" s="10"/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:3:2:1:2" typref="3861673449">
+<Attr>
+<Pos c="42" l="82" s="9"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="1135500976">
+<Attr>
+<Pos c="23" l="21" s="3"/>
+</Attr>
+<Binary_Exp op="-" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="9" l="80" s="4"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="17" l="80" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="24" l="80" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:2:1:2:1" typref="3505119464">
+<Attr>
+<Pos c="25" l="80" s="10"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:2" typref="116733260">
+<Attr>
+<Pos c="27" l="21" s="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((bank_code) : (((bank) >-> ((NATURAL-{0})))))" goalTag="Invariant is preserved">
+<Attr>
+<Pos c="16" l="22" s="1"/>
+</Attr>
+<Binary_Exp op="&lt;&lt;|" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:2:1:1" typref="1951996022">
+<Attr>
+<Pos c="12" l="81" s="9"/>
+</Attr>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="25" l="81" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:2:2:1:1:1" typref="3505119464">
+<Attr>
+<Pos c="26" l="81" s="10"/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:2:2:1:2" typref="1951996022">
+<Attr>
+<Pos c="42" l="81" s="9"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp op=">->" typref="868481891">
+<Attr>
+<Pos c="23" l="22" s="3"/>
+</Attr>
+<Binary_Exp op="-" tag=",C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:1,C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="9" l="80" s="4"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="17" l="80" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3780644081">
+<Attr>
+<Pos c="24" l="80" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:3:1:1:2:1:2:1" typref="3505119464">
+<Attr>
+<Pos c="25" l="80" s="10"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:3:2:2" typref="3603043417">
+<Attr>
+<Pos c="27" l="22" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos c="1" l="11" s="4"/>
+</Attr>
+<Set>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:2:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="12" s="4"/>
+</Attr>
+</Id>
+</Set>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --> (STR))))">
+<Attr>
+<Pos c="16" l="21" s="1"/>
+</Attr>
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:1" typref="3861673449">
+<Attr>
+<Pos c="7" l="21" s="9"/>
+</Attr>
+</Id>
+<Binary_Exp op="-->" typref="1135500976">
+<Attr>
+<Pos c="23" l="21" s="3"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:1" typref="3780644081">
+<Attr>
+<Pos c="18" l="21" s="4"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:2:2:2" typref="116733260">
+<Attr>
+<Pos c="27" l="21" s="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)">
+<Attr>
+<Pos c="10" l="20" s="2"/>
+</Attr>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:1" typref="3780644081">
+<Attr>
+<Pos c="5" l="20" s="4"/>
+</Attr>
+</Id>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:4:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="13" l="20" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_create_bank</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" l="35" s="2"/>
+</Attr>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:2:1" typref="2701647786">
+<Attr>
+<Pos c="11" l="35" s="10"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos c="25" l="35" s="3"/>
+</Attr>
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:2:2:1" typref="1951996022">
+<Attr>
+<Pos c="29" l="35" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="34" s="1"/>
+</Attr>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:1:1" typref="2701647786">
+<Attr>
+<Pos c="9" l="34" s="10"/>
+</Attr>
+</Id>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:1:2" typref="3603043417">
+<Attr>
+<Pos c="22" l="34" s="8"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_create_bank</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="34" s="1"/>
+</Attr>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:1:1" typref="2701647786">
+<Attr>
+<Pos c="9" l="34" s="10"/>
+</Attr>
+</Id>
+<Id value="NATURAL1" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:1:2" typref="3603043417">
+<Attr>
+<Pos c="22" l="34" s="8"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" l="35" s="2"/>
+</Attr>
+<Id value="code_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:2:1" typref="2701647786">
+<Attr>
+<Pos c="11" l="35" s="10"/>
+</Attr>
+</Id>
+<Unary_Exp op="ran" typref="3603043417">
+<Attr>
+<Pos c="25" l="35" s="3"/>
+</Attr>
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:2:2:1" typref="1951996022">
+<Attr>
+<Pos c="29" l="35" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" l="36" s="1"/>
+</Attr>
+<Id value="name_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:3:1" typref="2678451703">
+<Attr>
+<Pos c="11" l="36" s="10"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:3:1:3:2" typref="116733260">
+<Attr>
+<Pos c="24" l="36" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" l="39" s="1"/>
+</Attr>
+<Id value="new_bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:2:1:1" typref="3505119464">
+<Attr>
+<Pos c="13" l="39" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="-" typref="3780644081">
+<Attr>
+<Pos c="29" l="39" s="1"/>
+</Attr>
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:2:1:2:1" typref="3780644081">
+<Attr>
+<Pos c="24" l="39" s="4"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:1:4:1:2:1:2:2" typref="3780644081">
+<Attr>
+<Pos c="31" l="39" s="4"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_bank_code</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_bank_code</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="52" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:3:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="52" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:3:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="52" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:4:1:2:1:2" typref="3505119464">
+<Attr>
+<Pos c="33" l="54" s="10"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:4:1:2:1:1" typref="1951996022">
+<Attr>
+<Pos c="23" l="54" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:4:1:2:1:1" typref="1951996022">
+<Attr>
+<Pos c="23" l="54" s="9"/>
+</Attr>
+</Id>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:4:1:2:1:1" typref="1951996022">
+<Attr>
+<Pos c="23" l="54" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id value="bank_code" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:2:4:1:2:1:1" typref="1951996022">
+<Attr>
+<Pos c="23" l="54" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_bank_name</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_bank_name</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="60" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:3:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="60" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:3:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="60" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:4:1:2:1:2" typref="3505119464">
+<Attr>
+<Pos c="33" l="62" s="10"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:4:1:2:1:1" typref="3861673449">
+<Attr>
+<Pos c="23" l="62" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:4:1:2:1:1" typref="3861673449">
+<Attr>
+<Pos c="23" l="62" s="9"/>
+</Attr>
+</Id>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:4:1:2:1:1" typref="3861673449">
+<Attr>
+<Pos c="23" l="62" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id value="bank_name" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:3:4:1:2:1:1" typref="3861673449">
+<Attr>
+<Pos c="23" l="62" s="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_set_bank_name</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="68" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="68" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="68" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_set_bank_name</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="68" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="68" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="68" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" l="69" s="1"/>
+</Attr>
+<Id value="name_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:2:1" typref="2678451703">
+<Attr>
+<Pos c="11" l="69" s="10"/>
+</Attr>
+</Id>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:4:2:1:2:2" typref="116733260">
+<Attr>
+<Pos c="24" l="69" s="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_destroy_bank</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_destroy_bank</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" l="78" s="1"/>
+</Attr>
+<Id value="bank_value" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:2:1:1" typref="3505119464">
+<Attr>
+<Pos c="9" l="78" s="10"/>
+</Attr>
+</Id>
+<Id value="bank" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:6:5:2:1:2" typref="3780644081">
+<Attr>
+<Pos c="22" l="78" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="3780644081">
+<Unary_Exp op="POW">
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3861673449">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:2:1:1:1"/>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:2:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1951996022">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:3:1:1:1"/>
+<Id value="INTEGER" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:3:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1135500976">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:4:1:1:1:1"/>
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:4:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="116733260">
+<Unary_Exp op="POW">
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="868481891">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:6:1:1:1:1"/>
+<Id value="INTEGER" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:6:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:7:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:8:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3505119464">
+<Id value="BANK" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:9:1"/>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:10:1"/>
+</Type>
+<Type id="2678451703">
+<Id value="STR" tag="C:\Users\george\Desktop\formale\Banking\Bank.bxml:1:7:11:1"/>
+</Type>
+<Type id="116733260">
+<Unary_Exp op="POW">
+<Id value="STR" tag="C:/Users/george/Desktop/formale/Banking\String.bxml:1:3:1:1:1"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

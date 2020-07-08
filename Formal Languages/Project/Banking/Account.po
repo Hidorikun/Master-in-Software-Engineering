@@ -1,0 +1,114 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_customer.2,(_f(56) => _f(69));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_customer.1,(_f(56) => _f(68));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(29) & WellDefinedness_withdraw_account_amount.2,(_f(56) => _f(64));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(29) & WellDefinedness_withdraw_account_amount.1,(_f(56) => _f(63));
+_f(1) & _f(2) & _f(3) & _f(17) & WellDefinedness_Precondition_withdraw_account_amount.3,(_f(26) & _f(66) & _f(65) & _f(56) => _f(67));
+_f(1) & _f(2) & _f(3) & _f(17) & WellDefinedness_Precondition_withdraw_account_amount.2,(_f(26) & _f(66) & _f(56) => _f(64));
+_f(1) & _f(2) & _f(3) & _f(17) & WellDefinedness_Precondition_withdraw_account_amount.1,(_f(26) & _f(66) & _f(56) => _f(63));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_amount.2,(_f(56) => _f(64));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_amount.1,(_f(56) => _f(63));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_bank.2,(_f(56) => _f(62));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_bank.1,(_f(56) => _f(61));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_currency.2,(_f(56) => _f(60));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_currency.1,(_f(56) => _f(59));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_id.2,(_f(56) => _f(58));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & WellDefinedness_get_account_id.1,(_f(56) => _f(57));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & destroy_account.6,(_f(4) & _f(15) => _f(38));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & destroy_account.5,(_f(4) & _f(13) => _f(37));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & destroy_account.4,(_f(4) & _f(11) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & destroy_account.3,(_f(4) & _f(9) => _f(35));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & destroy_account.2,(_f(4) & _f(7) => _f(34));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(26) & destroy_account.1,(_f(4) & _f(5) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(31) & set_account_customer.1,(_f(4) & _f(15) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(29) & withdraw_account_amount.1,(_f(4) & _f(11) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(27) & set_account_currency.1,(_f(4) & _f(7) => _f(28));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(18) & create_account.6,(_f(19) & _f(4) & _f(15) => _f(25));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(18) & create_account.5,(_f(19) & _f(4) & _f(13) => _f(24));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(18) & create_account.4,(_f(19) & _f(4) & _f(11) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(18) & create_account.3,(_f(19) & _f(4) & _f(9) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(18) & create_account.2,(_f(19) & _f(4) & _f(7) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(18) & create_account.1,(_f(19) & _f(4) & _f(5) => _f(20));
+_f(1) & _f(2) & _f(3) & Initialisation.6,(_f(4) & _f(15) => _f(16));
+_f(1) & _f(2) & _f(3) & Initialisation.5,(_f(4) & _f(13) => _f(14));
+_f(1) & _f(2) & _f(3) & Initialisation.4,(_f(4) & _f(11) => _f(12));
+_f(1) & _f(2) & _f(3) & Initialisation.3,(_f(4) & _f(9) => _f(10));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(7) => _f(8));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) => _f(6))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+STR: FIN(INTEGER) & not(STR = {}) & ((1..3)*{CURRENCY}): FIN(NATURAL*{CURRENCY}) & not(((1..3)*{CURRENCY}) = {});
+ACCOUNT: FIN(INTEGER) & not(ACCOUNT = {});
+"Invariant is preserved";
+"Check invariant account : POW( ACCOUNT)";
+{} : POW( ACCOUNT);
+"Check invariant ((account_currency) : (((account) --> (CURRENCY))))";
+(({}) : ((({}) --> (((1..3)*{CURRENCY})))));
+"Check invariant ((account_id) : (((account) >-> ((NATURAL-{0})))))";
+(({}) : ((({}) >-> ((NATURAL-{0})))));
+"Check invariant ((account_amount) : (((account) --> ((NATURAL-{0})))))";
+(({}) : ((({}) --> ((NATURAL-{0})))));
+"Check invariant ((account_bank) : (((account) --> (bank))))";
+(({}) : ((({}) --> (bank))));
+"Check invariant ((account_customer) : (((account) --> (customer))))";
+(({}) : ((({}) --> (customer))));
+account : POW( ACCOUNT) & account_currency : account +-> ((1..3)*{CURRENCY}) & dom(account_currency) = account & ((account_currency) : (((account) --> (((1..3)*{CURRENCY}))))) & account_id : account +-> (NATURAL-{0}) & account_id : account --> (NATURAL-{0}) & account_id~ : (NATURAL-{0}) +-> account & ((account_id) : (((account) >-> ((NATURAL-{0}))))) & account_amount : account +-> (NATURAL-{0}) & dom(account_amount) = account & ((account_amount) : (((account) --> ((NATURAL-{0}))))) & account_bank : account +-> bank & dom(account_bank) = account & ((account_bank) : (((account) --> (bank)))) & account_customer : account +-> customer & dom(account_customer) = account & ((account_customer) : (((account) --> (customer))));
+((id_value) : ((NATURAL-{0}))) & not(id_value : ran(account_id)) & ((currency_value) : (((1..3)*{CURRENCY}))) & ((bank_value) : (bank));
+((new_account) : ((ACCOUNT - account)));
+((account) \/ (({new_account}))) : POW( ACCOUNT);
+((((account_currency) <+ (({((new_account) |-> (currency_value))})))) : (((((account) \/ (({new_account})))) --> (((1..3)*{CURRENCY})))));
+((((account_id) <+ (({((new_account) |-> (id_value))})))) : (((((account) \/ (({new_account})))) >-> ((NATURAL-{0})))));
+((account_amount) : (((((account) \/ (({new_account})))) --> ((NATURAL-{0})))));
+((((account_bank) <+ (({((new_account) |-> (bank_value))})))) : (((((account) \/ (({new_account})))) --> (bank))));
+((account_customer) : (((((account) \/ (({new_account})))) --> (customer))));
+((account_value) : (account));
+((account_value) : (account)) & ((currency_value) : (((1..3)*{CURRENCY})));
+((((account_currency) <+ (({((account_value) |-> (currency_value))})))) : (((account) --> (((1..3)*{CURRENCY})))));
+((account_value) : (account)) & ((money_value) : ((NATURAL-{0}))) & (money_value +1 <= (account_amount )(account_value)) & (((money_value / 10)) : ((NATURAL-{0})));
+((((account_amount) <+ (({((account_value) |-> (((account_amount )(account_value) - money_value)))})))) : (((account) --> ((NATURAL-{0})))));
+((account_value) : (account)) & ((customer_value) : (customer));
+((((account_customer) <+ (({((account_value) |-> (customer_value))})))) : (((account) --> (customer))));
+(account - ({account_value})) : POW( ACCOUNT);
+((((({account_value})) <<| (account_currency))) : ((((account - ({account_value}))) --> (((1..3)*{CURRENCY})))));
+((((({account_value})) <<| (account_id))) : ((((account - ({account_value}))) >-> ((NATURAL-{0})))));
+((((({account_value})) <<| (account_amount))) : ((((account - ({account_value}))) --> ((NATURAL-{0})))));
+((((({account_value})) <<| (account_bank))) : ((((account - ({account_value}))) --> (bank))));
+((((({account_value})) <<| (account_customer))) : ((((account - ({account_value}))) --> (customer))));
+account_bank : account +-> bank;
+dom(account_bank) = account;
+((account_bank) : (((account) --> (bank))));
+account_amount : account +-> (NATURAL-{0});
+dom(account_amount) = account;
+((account_amount) : (((account) --> ((NATURAL-{0})))));
+account_id : account +-> (NATURAL-{0});
+account_id : account --> (NATURAL-{0});
+account_id~ : (NATURAL-{0}) +-> account;
+((account_id) : (((account) >-> ((NATURAL-{0})))));
+account_currency : account +-> ((1..3)*{CURRENCY});
+dom(account_currency) = account;
+((account_currency) : (((account) --> (((1..3)*{CURRENCY})))));
+account : POW( ACCOUNT);
+((currency_value) : (((1..3)*{CURRENCY})));
+not(id_value : ran(account_id));
+((id_value) : ((NATURAL-{0})));
+"Well definedness";
+((account_value) : (dom(account_id)));
+((account_id) : (((dom(account_id)) +-> (ran(account_id)))));
+((account_value) : (dom(account_currency)));
+((account_currency) : (((dom(account_currency)) +-> (ran(account_currency)))));
+((account_value) : (dom(account_bank)));
+((account_bank) : (((dom(account_bank)) +-> (ran(account_bank)))));
+((account_value) : (dom(account_amount)));
+((account_amount) : (((dom(account_amount)) +-> (ran(account_amount)))));
+(money_value +1 <= (account_amount )(account_value));
+((money_value) : ((NATURAL-{0})));
+not(((10) = (0)));
+((account_value) : (dom(account_customer)));
+((account_customer) : (((dom(account_customer)) +-> (ran(account_customer)))))
+END
+&
+THEORY EnumerateX IS
+CURRENCY == {EUR,LEU,DOLLAR}
+END

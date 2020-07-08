@@ -1,0 +1,57 @@
+exam structure: 
+A. For a given set of requirements you have to: 
+	* Analyze them using two or three characteristics from course 1 
+	* Rewrite some of them using the Gherkin language ( given, when, then )
+	* Prioritize them using two given techniques
+B. Explain in your own words a concept from RE
+
+course 1: 
+
+requirements characteristics: 
+1 Feasable
+	If it is phisically possible 
+	If you can do it with your resources 
+
+2 Correct/Valid
+	If it is exactly what the customer wants. 
+	A must have
+	If the user wants something inappropriate, it is still considered a correct requirement, as he wanted it 
+
+3 Unambiguous
+	You cannot think of it in multiple ways
+
+4 Verifiable
+	Can be tested
+
+5 Modifiable
+	It follows a structure/template that you can easily edit
+	Should not have redundant information / duplicate , and modifications should not need to cascade
+
+6 Consistent
+	You must not have requirements that contradict one another
+	Or in combination, make the program unfeasable to build
+
+7 Traceable
+	As we do in Jazz
+
+course 5: 
+prioritization
+importance / risk / cost
+
+Analytical HIerarchy Process (AHP)
+* Compare every requirement with every other requirement and see what is more important
+* N x (N-1) / 2 comporisons
+
+Comulative Voting, the 100 dollar test
+* you have $100, and 20 tasks, give it out to what you like the most
+
+Numerical Assignment ( Grouping ) 
+* Group requirements into 2 or 3 groups ( crritical, standard, optional ) for example 
+* can put limits on the max number of elements in each group 
+* there is no unique priority for a reuquirement
+
+Ranking 
+* you assign numbers from 1 to N to each requirement, and sort after that
+
+Top Ten Requirements 
+You choose 10, they have the same importnace

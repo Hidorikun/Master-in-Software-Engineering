@@ -1,0 +1,2168 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp">
+<Attr>
+<Pos l="8" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:3:1:1" value="PIN_STATES" typref="60114145">
+<Attr>
+<Pos l="9" s="10" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:3:1:2:1" value="CORRECT_PIN" typref="4126415992">
+<Attr>
+<Pos l="9" s="11" c="20"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:3:1:2:2" value="INCORRECT_PIN" typref="4126415992">
+<Attr>
+<Pos l="9" s="13" c="33"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="inprp">
+<Attr>
+<Pos l="15" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:3:1:1" value="ATMs" typref="3628986030">
+<Attr>
+<Pos l="16" s="4" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Attr>
+<Pos l="16" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:3:1:1" value="ACCOUNT" typref="722135624">
+<Attr>
+<Pos l="17" s="7" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Attr>
+<Pos l="11" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:2:1:1" value="BANK" typref="3780644081">
+<Attr>
+<Pos l="12" s="4" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Attr>
+<Pos l="14" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:3:1:1" value="CARD" typref="3877768869">
+<Attr>
+<Pos l="15" s="4" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Attr>
+<Pos l="11" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:2:1:1" value="CUSTOMER" typref="2110079763">
+<Attr>
+<Pos l="12" s="8" c="5"/>
+</Attr>
+</Id>
+</Set>
+</Define>
+<Define name="inext">
+<Attr>
+<Pos l="25" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="atm : POW( ATMs)">
+<Attr>
+<Pos l="26" s="2" c="9"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:1:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="26" s="3" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:1:2" value="ATMs" typref="3628986030">
+<Attr>
+<Pos l="26" s="4" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_id) : (((atm) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="27" s="1" c="14"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:2:1" value="atm_id" typref="4142740787">
+<Attr>
+<Pos l="27" s="6" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="514122982">
+<Attr>
+<Pos l="27" s="3" c="20"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:2:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="27" s="3" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:2:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="27" s="8" c="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_bank) : (((atm) --&gt; (bank))))">
+<Attr>
+<Pos l="28" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:3:1" value="atm_bank" typref="1787800339">
+<Attr>
+<Pos l="28" s="8" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="830522672">
+<Attr>
+<Pos l="28" s="3" c="22"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:3:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="28" s="3" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:3:2:2" value="bank" typref="3780644081">
+<Attr>
+<Pos l="28" s="4" c="26"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_inserted_card) : (((atm) &gt;-&gt; (cards))))">
+<Attr>
+<Pos l="29" s="1" c="25"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:4:1" value="atm_inserted_card" typref="2708174535">
+<Attr>
+<Pos l="29" s="17" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="3228664444">
+<Attr>
+<Pos l="29" s="3" c="31"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:4:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="29" s="3" c="27"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:4:2:2" value="cards" typref="3877768869">
+<Attr>
+<Pos l="29" s="5" c="35"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_inserted_card_authenticated) : (((atm) --&gt; (BOOL))))">
+<Attr>
+<Pos l="30" s="1" c="39"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:5:1" value="atm_inserted_card_authenticated" typref="961305441">
+<Attr>
+<Pos l="30" s="31" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="3238711906">
+<Attr>
+<Pos l="30" s="3" c="45"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:5:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="30" s="3" c="41"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:5:2:2" value="BOOL" typref="4282494527">
+<Attr>
+<Pos l="30" s="4" c="49"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="27" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="account : POW( ACCOUNT)">
+<Attr>
+<Pos l="28" s="2" c="13"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:1:1" value="account" typref="722135624">
+<Attr>
+<Pos l="28" s="7" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:1:2" value="ACCOUNT" typref="722135624">
+<Attr>
+<Pos l="28" s="7" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_currency) : (((account) --&gt; (CURRENCY))))">
+<Attr>
+<Pos l="29" s="1" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:2:1" value="account_currency" typref="947324">
+<Attr>
+<Pos l="29" s="16" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="4091922397">
+<Attr>
+<Pos l="29" s="3" c="33"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:2:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="29" s="7" c="25"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:2:2:2" value="CURRENCY" typref="1322598246">
+<Attr>
+<Pos l="29" s="8" c="37"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_id) : (((account) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="30" s="1" c="17"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:3:1" value="account_id" typref="3514921919">
+<Attr>
+<Pos l="30" s="10" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="4169395204">
+<Attr>
+<Pos l="30" s="3" c="27"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:3:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="30" s="7" c="19"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="30" s="8" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_amount) : (((account) --&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="31" s="1" c="21"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:4:1" value="account_amount" typref="3514921919">
+<Attr>
+<Pos l="31" s="14" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="4169395204">
+<Attr>
+<Pos l="31" s="3" c="31"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:4:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="31" s="7" c="23"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:4:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="31" s="8" c="35"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_bank) : (((account) --&gt; (bank))))">
+<Attr>
+<Pos l="32" s="1" c="19"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:5:1" value="account_bank" typref="802423687">
+<Attr>
+<Pos l="32" s="12" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1067919250">
+<Attr>
+<Pos l="32" s="3" c="29"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:5:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="32" s="7" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:5:2:2" value="bank" typref="3780644081">
+<Attr>
+<Pos l="32" s="4" c="33"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_customer) : (((account) --&gt; (customer))))">
+<Attr>
+<Pos l="33" s="1" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:6:1" value="account_customer" typref="3572730537">
+<Attr>
+<Pos l="33" s="16" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="3402523632">
+<Attr>
+<Pos l="33" s="3" c="33"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:6:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="33" s="7" c="25"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:6:2:2" value="customer" typref="2110079763">
+<Attr>
+<Pos l="33" s="8" c="37"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="19" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)">
+<Attr>
+<Pos l="20" s="2" c="10"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:1:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="20" s="4" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:1:2" value="BANK" typref="3780644081">
+<Attr>
+<Pos l="20" s="4" c="13"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --&gt; (STR))))">
+<Attr>
+<Pos l="21" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:2:1" value="bank_name" typref="3861673449">
+<Attr>
+<Pos l="21" s="9" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1135500976">
+<Attr>
+<Pos l="21" s="3" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:2:2:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="21" s="4" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:2:2:2" value="STR" typref="116733260">
+<Attr>
+<Pos l="21" s="3" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((bank_code) : (((bank) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="22" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:3:1" value="bank_code" typref="1951996022">
+<Attr>
+<Pos l="22" s="9" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="868481891">
+<Attr>
+<Pos l="22" s="3" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:3:2:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="22" s="4" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="22" s="8" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="24" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="cards : POW( CARD)">
+<Attr>
+<Pos l="25" s="2" c="11"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:1:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="25" s="5" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:1:2" value="CARD" typref="3877768869">
+<Attr>
+<Pos l="25" s="4" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_number) : (((cards) &gt;-&gt; (STR))))">
+<Attr>
+<Pos l="26" s="1" c="18"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:2:1" value="card_number" typref="1546966941">
+<Attr>
+<Pos l="26" s="11" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="1998194172">
+<Attr>
+<Pos l="26" s="3" c="26"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:2:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="26" s="5" c="20"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:2:2:2" value="STR" typref="116733260">
+<Attr>
+<Pos l="26" s="3" c="30"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_code) : (((cards) --&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="27" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:3:1" value="card_code" typref="882066986">
+<Attr>
+<Pos l="27" s="9" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="2018825903">
+<Attr>
+<Pos l="27" s="3" c="24"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:3:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="27" s="5" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="27" s="8" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_pin) : (((cards) --&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:4:1" value="card_pin" typref="882066986">
+<Attr>
+<Pos l="28" s="8" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="2018825903">
+<Attr>
+<Pos l="28" s="3" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:4:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="28" s="5" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:4:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="28" s="8" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_account) : (((cards) --&gt; (account))))">
+<Attr>
+<Pos l="29" s="1" c="19"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:5:1" value="card_account" typref="2580326297">
+<Attr>
+<Pos l="29" s="12" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1598422528">
+<Attr>
+<Pos l="29" s="3" c="27"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:5:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="29" s="5" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:5:2:2" value="account" typref="722135624">
+<Attr>
+<Pos l="29" s="7" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="19" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="customer : POW( CUSTOMER)">
+<Attr>
+<Pos l="20" s="2" c="14"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:1:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="20" s="8" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:1:2" value="CUSTOMER" typref="2110079763">
+<Attr>
+<Pos l="20" s="8" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((customer_name) : (((customer) --&gt; (STR))))">
+<Attr>
+<Pos l="21" s="1" c="20"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:2:1" value="customer_name" typref="2985432331">
+<Attr>
+<Pos l="21" s="13" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="3950150414">
+<Attr>
+<Pos l="21" s="3" c="31"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:2:2:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="21" s="8" c="22"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:2:2:2" value="STR" typref="116733260">
+<Attr>
+<Pos l="21" s="3" c="35"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((customer_id) : (((customer) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="22" s="1" c="18"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:3:1" value="customer_id" typref="797201816">
+<Attr>
+<Pos l="22" s="11" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="3316580801">
+<Attr>
+<Pos l="22" s="3" c="29"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:3:2:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="22" s="8" c="20"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="22" s="8" c="33"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inv"/>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos l="32" s="14" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:1:1:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="33" s="3" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos l="33" s="3" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:2:1:1" value="atm_id" typref="4142740787">
+<Attr>
+<Pos l="34" s="6" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos l="34" s="6" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:3:1:1" value="atm_bank" typref="1787800339">
+<Attr>
+<Pos l="35" s="8" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos l="35" s="8" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:4:1:1" value="atm_inserted_card" typref="2708174535">
+<Attr>
+<Pos l="36" s="17" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:4:2:1" typref="3817003670">
+<Attr>
+<Pos l="36" s="17" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:5:1:1" value="atm_inserted_card_authenticated" typref="961305441">
+<Attr>
+<Pos l="37" s="31" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:6:1:5:2:1" typref="3817003670">
+<Attr>
+<Pos l="37" s="31" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Attr>
+<Pos l="35" s="14" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:1:1:1" value="account" typref="722135624">
+<Attr>
+<Pos l="36" s="7" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos l="36" s="7" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:2:1:1" value="account_currency" typref="947324">
+<Attr>
+<Pos l="37" s="16" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos l="37" s="16" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:3:1:1" value="account_id" typref="3514921919">
+<Attr>
+<Pos l="38" s="10" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos l="38" s="10" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:4:1:1" value="account_amount" typref="3514921919">
+<Attr>
+<Pos l="39" s="14" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:4:2:1" typref="3817003670">
+<Attr>
+<Pos l="39" s="14" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:5:1:1" value="account_bank" typref="802423687">
+<Attr>
+<Pos l="40" s="12" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:5:2:1" typref="3817003670">
+<Attr>
+<Pos l="40" s="12" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:6:1:1" value="account_customer" typref="3572730537">
+<Attr>
+<Pos l="41" s="16" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:6:1:6:2:1" typref="3817003670">
+<Attr>
+<Pos l="41" s="16" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Attr>
+<Pos l="24" s="14" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:5:1:1:1:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="25" s="4" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:5:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos l="25" s="4" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:5:1:2:1:1" value="bank_name" typref="3861673449">
+<Attr>
+<Pos l="26" s="9" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:5:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos l="26" s="9" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:5:1:3:1:1" value="bank_code" typref="1951996022">
+<Attr>
+<Pos l="27" s="9" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:5:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos l="27" s="9" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Attr>
+<Pos l="32" s="14" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:1:1:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="33" s="5" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos l="33" s="5" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:2:1:1" value="card_number" typref="1546966941">
+<Attr>
+<Pos l="34" s="11" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos l="34" s="11" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:3:1:1" value="card_code" typref="882066986">
+<Attr>
+<Pos l="35" s="9" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos l="35" s="9" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:4:1:1" value="card_pin" typref="882066986">
+<Attr>
+<Pos l="36" s="8" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:4:2:1" typref="3817003670">
+<Attr>
+<Pos l="36" s="8" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:5:1:1" value="card_account" typref="2580326297">
+<Attr>
+<Pos l="37" s="12" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:6:1:5:2:1" typref="3817003670">
+<Attr>
+<Pos l="37" s="12" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Attr>
+<Pos l="24" s="14" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:5:1:1:1:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="25" s="8" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:5:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos l="25" s="8" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:5:1:2:1:1" value="customer_name" typref="2985432331">
+<Attr>
+<Pos l="26" s="13" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:5:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos l="26" s="13" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:5:1:3:1:1" value="customer_id" typref="797201816">
+<Attr>
+<Pos l="27" s="11" c="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:5:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos l="27" s="11" c="8"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Skip tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:4:1"/>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="25" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="atm : POW( ATMs)">
+<Attr>
+<Pos l="26" s="2" c="9"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:1:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="26" s="3" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:1:2" value="ATMs" typref="3628986030">
+<Attr>
+<Pos l="26" s="4" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_id) : (((atm) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="27" s="1" c="14"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:2:1" value="atm_id" typref="4142740787">
+<Attr>
+<Pos l="27" s="6" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="514122982">
+<Attr>
+<Pos l="27" s="3" c="20"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:2:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="27" s="3" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:2:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="27" s="8" c="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_bank) : (((atm) --&gt; (bank))))">
+<Attr>
+<Pos l="28" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:3:1" value="atm_bank" typref="1787800339">
+<Attr>
+<Pos l="28" s="8" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="830522672">
+<Attr>
+<Pos l="28" s="3" c="22"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:3:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="28" s="3" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:3:2:2" value="bank" typref="3780644081">
+<Attr>
+<Pos l="28" s="4" c="26"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_inserted_card) : (((atm) &gt;-&gt; (cards))))">
+<Attr>
+<Pos l="29" s="1" c="25"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:4:1" value="atm_inserted_card" typref="2708174535">
+<Attr>
+<Pos l="29" s="17" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="3228664444">
+<Attr>
+<Pos l="29" s="3" c="31"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:4:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="29" s="3" c="27"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:4:2:2" value="cards" typref="3877768869">
+<Attr>
+<Pos l="29" s="5" c="35"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((atm_inserted_card_authenticated) : (((atm) --&gt; (BOOL))))">
+<Attr>
+<Pos l="30" s="1" c="39"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:5:1" value="atm_inserted_card_authenticated" typref="961305441">
+<Attr>
+<Pos l="30" s="31" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="3238711906">
+<Attr>
+<Pos l="30" s="3" c="45"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:5:2:1" value="atm" typref="3628986030">
+<Attr>
+<Pos l="30" s="3" c="41"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:5:1:5:2:2" value="BOOL" typref="4282494527">
+<Attr>
+<Pos l="30" s="4" c="49"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="27" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="account : POW( ACCOUNT)">
+<Attr>
+<Pos l="28" s="2" c="13"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:1:1" value="account" typref="722135624">
+<Attr>
+<Pos l="28" s="7" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:1:2" value="ACCOUNT" typref="722135624">
+<Attr>
+<Pos l="28" s="7" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_currency) : (((account) --&gt; (CURRENCY))))">
+<Attr>
+<Pos l="29" s="1" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:2:1" value="account_currency" typref="947324">
+<Attr>
+<Pos l="29" s="16" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="4091922397">
+<Attr>
+<Pos l="29" s="3" c="33"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:2:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="29" s="7" c="25"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:2:2:2" value="CURRENCY" typref="1322598246">
+<Attr>
+<Pos l="29" s="8" c="37"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_id) : (((account) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="30" s="1" c="17"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:3:1" value="account_id" typref="3514921919">
+<Attr>
+<Pos l="30" s="10" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="4169395204">
+<Attr>
+<Pos l="30" s="3" c="27"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:3:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="30" s="7" c="19"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="30" s="8" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_amount) : (((account) --&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="31" s="1" c="21"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:4:1" value="account_amount" typref="3514921919">
+<Attr>
+<Pos l="31" s="14" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="4169395204">
+<Attr>
+<Pos l="31" s="3" c="31"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:4:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="31" s="7" c="23"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:4:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="31" s="8" c="35"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_bank) : (((account) --&gt; (bank))))">
+<Attr>
+<Pos l="32" s="1" c="19"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:5:1" value="account_bank" typref="802423687">
+<Attr>
+<Pos l="32" s="12" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1067919250">
+<Attr>
+<Pos l="32" s="3" c="29"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:5:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="32" s="7" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:5:2:2" value="bank" typref="3780644081">
+<Attr>
+<Pos l="32" s="4" c="33"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((account_customer) : (((account) --&gt; (customer))))">
+<Attr>
+<Pos l="33" s="1" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:6:1" value="account_customer" typref="3572730537">
+<Attr>
+<Pos l="33" s="16" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="3402523632">
+<Attr>
+<Pos l="33" s="3" c="33"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:6:2:1" value="account" typref="722135624">
+<Attr>
+<Pos l="33" s="7" c="25"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:5:1:6:2:2" value="customer" typref="2110079763">
+<Attr>
+<Pos l="33" s="8" c="37"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="19" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="bank : POW( BANK)">
+<Attr>
+<Pos l="20" s="2" c="10"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:1:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="20" s="4" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:1:2" value="BANK" typref="3780644081">
+<Attr>
+<Pos l="20" s="4" c="13"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((bank_name) : (((bank) --&gt; (STR))))">
+<Attr>
+<Pos l="21" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:2:1" value="bank_name" typref="3861673449">
+<Attr>
+<Pos l="21" s="9" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1135500976">
+<Attr>
+<Pos l="21" s="3" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:2:2:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="21" s="4" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:2:2:2" value="STR" typref="116733260">
+<Attr>
+<Pos l="21" s="3" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((bank_code) : (((bank) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="22" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:3:1" value="bank_code" typref="1951996022">
+<Attr>
+<Pos l="22" s="9" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="868481891">
+<Attr>
+<Pos l="22" s="3" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:3:2:1" value="bank" typref="3780644081">
+<Attr>
+<Pos l="22" s="4" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:4:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="22" s="8" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="24" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="cards : POW( CARD)">
+<Attr>
+<Pos l="25" s="2" c="11"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:1:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="25" s="5" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:1:2" value="CARD" typref="3877768869">
+<Attr>
+<Pos l="25" s="4" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_number) : (((cards) &gt;-&gt; (STR))))">
+<Attr>
+<Pos l="26" s="1" c="18"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:2:1" value="card_number" typref="1546966941">
+<Attr>
+<Pos l="26" s="11" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="1998194172">
+<Attr>
+<Pos l="26" s="3" c="26"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:2:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="26" s="5" c="20"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:2:2:2" value="STR" typref="116733260">
+<Attr>
+<Pos l="26" s="3" c="30"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_code) : (((cards) --&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="27" s="1" c="16"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:3:1" value="card_code" typref="882066986">
+<Attr>
+<Pos l="27" s="9" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="2018825903">
+<Attr>
+<Pos l="27" s="3" c="24"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:3:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="27" s="5" c="18"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="27" s="8" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_pin) : (((cards) --&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="28" s="1" c="15"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:4:1" value="card_pin" typref="882066986">
+<Attr>
+<Pos l="28" s="8" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="2018825903">
+<Attr>
+<Pos l="28" s="3" c="23"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:4:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="28" s="5" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:4:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="28" s="8" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((card_account) : (((cards) --&gt; (account))))">
+<Attr>
+<Pos l="29" s="1" c="19"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:5:1" value="card_account" typref="2580326297">
+<Attr>
+<Pos l="29" s="12" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1598422528">
+<Attr>
+<Pos l="29" s="3" c="27"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:5:2:1" value="cards" typref="3877768869">
+<Attr>
+<Pos l="29" s="5" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:5:1:5:2:2" value="account" typref="722135624">
+<Attr>
+<Pos l="29" s="7" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Attr>
+<Pos l="19" s="9" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="customer : POW( CUSTOMER)">
+<Attr>
+<Pos l="20" s="2" c="14"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:1:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="20" s="8" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:1:2" value="CUSTOMER" typref="2110079763">
+<Attr>
+<Pos l="20" s="8" c="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((customer_name) : (((customer) --&gt; (STR))))">
+<Attr>
+<Pos l="21" s="1" c="20"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:2:1" value="customer_name" typref="2985432331">
+<Attr>
+<Pos l="21" s="13" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="3950150414">
+<Attr>
+<Pos l="21" s="3" c="31"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:2:2:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="21" s="8" c="22"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:2:2:2" value="STR" typref="116733260">
+<Attr>
+<Pos l="21" s="3" c="35"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((customer_id) : (((customer) &gt;-&gt; ((NATURAL-{0})))))">
+<Attr>
+<Pos l="22" s="1" c="18"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:3:1" value="customer_id" typref="797201816">
+<Attr>
+<Pos l="22" s="11" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="&gt;-&gt;" typref="3316580801">
+<Attr>
+<Pos l="22" s="3" c="29"/>
+</Attr>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:3:2:1" value="customer" typref="2110079763">
+<Attr>
+<Pos l="22" s="8" c="20"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:4:1:3:2:2" value="NATURAL1" typref="3603043417">
+<Attr>
+<Pos l="22" s="8" c="33"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos l="8" s="4" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:3:1:1" value="PIN_STATES" typref="60114145">
+<Attr>
+<Pos l="9" s="10" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:3:1:2:1" value="CORRECT_PIN" typref="4126415992">
+<Attr>
+<Pos l="9" s="11" c="20"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:3:1:2:2" value="INCORRECT_PIN" typref="4126415992">
+<Attr>
+<Pos l="9" s="13" c="33"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="60114145">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:5:1:1:1" value="PIN_STATES"/>
+</Unary_Exp>
+</Type>
+<Type id="4126415992">
+<Id tag="C:\Users\george\Desktop\formale\Banking\System.bxml:1:5:2:1" value="PIN_STATES"/>
+</Type>
+<Type id="3628986030">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:1:1:1" value="ATMs"/>
+</Unary_Exp>
+</Type>
+<Type id="4142740787">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:2:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:2:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1787800339">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:3:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:3:1:1:2" value="BANK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2708174535">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:4:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:4:1:1:2" value="CARD"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="961305441">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:5:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:5:1:1:2" value="BOOL"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="514122982">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:6:1:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:6:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:7:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="830522672">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:8:1:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:8:1:1:1:2" value="BANK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3780644081">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:9:1:1" value="BANK"/>
+</Unary_Exp>
+</Type>
+<Type id="3228664444">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:10:1:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:10:1:1:1:2" value="CARD"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3877768869">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:11:1:1" value="CARD"/>
+</Unary_Exp>
+</Type>
+<Type id="3238711906">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:12:1:1:1:1" value="ATMs"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:12:1:1:1:2" value="BOOL"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:13:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:14:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2704304363">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:15:1" value="ATMs"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:16:1" value="INTEGER"/>
+</Type>
+<Type id="3505119464">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:17:1" value="BANK"/>
+</Type>
+<Type id="2043437594">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:18:1" value="BOOL"/>
+</Type>
+<Type id="1897436724">
+<Id tag="C:/Users/george/Desktop/formale/Banking\ATM.bxml:1:8:19:1" value="CARD"/>
+</Type>
+<Type id="722135624">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:1:1:1" value="ACCOUNT"/>
+</Unary_Exp>
+</Type>
+<Type id="947324">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:2:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:2:1:1:2" value="CURRENCY"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3514921919">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:3:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:3:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="802423687">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:4:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:4:1:1:2" value="BANK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3572730537">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:5:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:5:1:1:2" value="CUSTOMER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4091922397">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:6:1:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:6:1:1:1:2" value="CURRENCY"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1322598246">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:7:1:1" value="CURRENCY"/>
+</Unary_Exp>
+</Type>
+<Type id="4169395204">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:8:1:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:8:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:9:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="1067919250">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:10:1:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:10:1:1:1:2" value="BANK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3780644081">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:11:1:1" value="BANK"/>
+</Unary_Exp>
+</Type>
+<Type id="3402523632">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:12:1:1:1:1" value="ACCOUNT"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:12:1:1:1:2" value="CUSTOMER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2110079763">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:13:1:1" value="CUSTOMER"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:14:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2223075579">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:15:1" value="ACCOUNT"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:16:1" value="INTEGER"/>
+</Type>
+<Type id="3335280435">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:17:1" value="CURRENCY"/>
+</Type>
+<Type id="3505119464">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:18:1" value="BANK"/>
+</Type>
+<Type id="1773367622">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Account.bxml:1:8:19:1" value="CUSTOMER"/>
+</Type>
+<Type id="3780644081">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:1:1:1" value="BANK"/>
+</Unary_Exp>
+</Type>
+<Type id="3861673449">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:2:1:1:1" value="BANK"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:2:1:1:2" value="STR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1951996022">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:3:1:1:1" value="BANK"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:3:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1135500976">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:4:1:1:1:1" value="BANK"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:4:1:1:1:2" value="STR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="116733260">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:5:1:1" value="STR"/>
+</Unary_Exp>
+</Type>
+<Type id="868481891">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:6:1:1:1:1" value="BANK"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:6:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:7:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:8:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3505119464">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:9:1" value="BANK"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:10:1" value="INTEGER"/>
+</Type>
+<Type id="2678451703">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Bank.bxml:1:7:11:1" value="STR"/>
+</Type>
+<Type id="3877768869">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:1:1:1" value="CARD"/>
+</Unary_Exp>
+</Type>
+<Type id="1546966941">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:2:1:1:1" value="CARD"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:2:1:1:2" value="STR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="882066986">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:3:1:1:1" value="CARD"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:3:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2580326297">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:4:1:1:1" value="CARD"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:4:1:1:2" value="ACCOUNT"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1998194172">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:5:1:1:1:1" value="CARD"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:5:1:1:1:2" value="STR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="116733260">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:6:1:1" value="STR"/>
+</Unary_Exp>
+</Type>
+<Type id="2018825903">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:7:1:1:1:1" value="CARD"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:7:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:8:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="1598422528">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:9:1:1:1:1" value="CARD"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:9:1:1:1:2" value="ACCOUNT"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="722135624">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:10:1:1" value="ACCOUNT"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:11:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1897436724">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:12:1" value="CARD"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:13:1" value="INTEGER"/>
+</Type>
+<Type id="2678451703">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:14:1" value="STR"/>
+</Type>
+<Type id="2223075579">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Card.bxml:1:8:15:1" value="ACCOUNT"/>
+</Type>
+<Type id="2110079763">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:1:1:1" value="CUSTOMER"/>
+</Unary_Exp>
+</Type>
+<Type id="2985432331">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:2:1:1:1" value="CUSTOMER"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:2:1:1:2" value="STR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="797201816">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:3:1:1:1" value="CUSTOMER"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:3:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3950150414">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:4:1:1:1:1" value="CUSTOMER"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:4:1:1:1:2" value="STR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="116733260">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:5:1:1" value="STR"/>
+</Unary_Exp>
+</Type>
+<Type id="3316580801">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:6:1:1:1:1" value="CUSTOMER"/>
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:6:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:7:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:8:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1773367622">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:9:1" value="CUSTOMER"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:10:1" value="INTEGER"/>
+</Type>
+<Type id="2678451703">
+<Id tag="C:/Users/george/Desktop/formale/Banking\Customer.bxml:1:7:11:1" value="STR"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

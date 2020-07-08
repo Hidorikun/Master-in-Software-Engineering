@@ -1,0 +1,25 @@
+<Machine name='String' type='abstraction'>
+<Sets>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='STR' typref='116733260'>
+<Attr>
+<Pos l='9' c='5' s='3'/>
+</Attr>
+</Id>
+</Set>
+</Sets>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='116733260'>
+<Unary_Exp op='POW'>
+<Id value='STR'/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

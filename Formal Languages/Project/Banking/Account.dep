@@ -1,0 +1,5 @@
+file:0c7d1edeed646bd3411134986830e927
+sees:String
+sees:Currency
+uses:Bank
+uses:Customer
